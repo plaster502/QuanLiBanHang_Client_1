@@ -1,0 +1,971 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BanHangService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" />
+      <xsd:import />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="INhanVien_NhanVien_CheckLogIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhanVien_CheckLogIn" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_CheckLogIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhanVien_CheckLogInResponse" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_CheckLogIn_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/System" name="detail" element="q1:Exception" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_GetNhanVien_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhanVien_GetNhanVien" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_GetNhanVien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhanVien_GetNhanVienResponse" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_GetNhanVien_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/System" name="detail" element="q2:Exception" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_GetNhanVienByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhanVien_GetNhanVienByID" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_GetNhanVienByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhanVien_GetNhanVienByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_GetNhanVienByID_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/System" name="detail" element="q3:Exception" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_UpdatePersonalInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhanVien_UpdatePersonalInfo" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_UpdatePersonalInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhanVien_UpdatePersonalInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_UpdatePersonalInfo_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/System" name="detail" element="q4:Exception" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhanVien_Insert" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhanVien_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_Insert_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/System" name="detail" element="q5:Exception" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhanVien_Update" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhanVien_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_Update_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/System" name="detail" element="q6:Exception" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhanVien_Delete" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhanVien_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="INhanVien_NhanVien_Delete_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/System" name="detail" element="q7:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_GetPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuNhap_GetPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_GetPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuNhap_GetPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_GetPhieuNhap_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/System" name="detail" element="q8:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_LoadChiTiet_InputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuNhap_LoadChiTiet" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_LoadChiTiet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuNhap_LoadChiTietResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_LoadChiTiet_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/System" name="detail" element="q9:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuNhap_Delete" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuNhap_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_Delete_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/System" name="detail" element="q10:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_GetNewID_InputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuNhap_GetNewID" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_GetNewID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuNhap_GetNewIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_GetNewID_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/System" name="detail" element="q11:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuNhap_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuNhap_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_Insert_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/System" name="detail" element="q12:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuNhap_Update" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuNhap_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuNhap_PhieuNhap_Update_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/System" name="detail" element="q13:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_GetPhieuXuat_InputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuXuat_GetPhieuXuat" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_GetPhieuXuat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuXuat_GetPhieuXuatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_GetPhieuXuat_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/System" name="detail" element="q14:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IHoaDon_HoaDon_GetHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:HoaDon_GetHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IHoaDon_HoaDon_GetHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HoaDon_GetHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKhachHang_KhachHang_GetKhachHang_InputMessage">
+    <wsdl:part name="parameters" element="tns:KhachHang_GetKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="IKhachHang_KhachHang_GetKhachHang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KhachHang_GetKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKhachHang_KhachHang_GetKhachHang_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/System" name="detail" element="q15:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuThu_PhieuThu_GetPhieuThu_InputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuThu_GetPhieuThu" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuThu_PhieuThu_GetPhieuThu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuThu_GetPhieuThuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuThu_PhieuThu_GetPhieuThu_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/System" name="detail" element="q16:Exception" />
+  </wsdl:message>
+  <wsdl:message name="ISanPham_SanPham_GetSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:SanPham_GetSanPham" />
+  </wsdl:message>
+  <wsdl:message name="ISanPham_SanPham_GetSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SanPham_GetSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPham_SanPham_GetSanPham_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/System" name="detail" element="q17:Exception" />
+  </wsdl:message>
+  <wsdl:message name="ISanPham_SanPham_Search_InputMessage">
+    <wsdl:part name="parameters" element="tns:SanPham_Search" />
+  </wsdl:message>
+  <wsdl:message name="ISanPham_SanPham_Search_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SanPham_SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPham_SanPham_Search_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/System" name="detail" element="q18:Exception" />
+  </wsdl:message>
+  <wsdl:message name="ISanPham_SanPham_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:SanPham_Insert" />
+  </wsdl:message>
+  <wsdl:message name="ISanPham_SanPham_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SanPham_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPham_SanPham_Insert_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/System" name="detail" element="q19:Exception" />
+  </wsdl:message>
+  <wsdl:message name="ISanPham_SanPham_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:SanPham_Update" />
+  </wsdl:message>
+  <wsdl:message name="ISanPham_SanPham_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SanPham_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPham_SanPham_Update_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/System" name="detail" element="q20:Exception" />
+  </wsdl:message>
+  <wsdl:message name="ISanPham_SanPham_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:SanPham_Delete" />
+  </wsdl:message>
+  <wsdl:message name="ISanPham_SanPham_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SanPham_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISanPham_SanPham_Delete_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/System" name="detail" element="q21:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IDonVi_DonVi_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonVi_GetData" />
+  </wsdl:message>
+  <wsdl:message name="IDonVi_DonVi_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonVi_GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDonVi_DonVi_GetData_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/System" name="detail" element="q22:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IDonVi_DonVi_UpdateInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonVi_UpdateInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDonVi_DonVi_UpdateInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonVi_UpdateInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDonVi_DonVi_UpdateInfo_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/System" name="detail" element="q23:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IDonViTinh_DonViTinh_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonViTinh_GetData" />
+  </wsdl:message>
+  <wsdl:message name="IDonViTinh_DonViTinh_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonViTinh_GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDonViTinh_DonViTinh_GetData_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/System" name="detail" element="q24:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IDonViTinh_DonViTinh_Search_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonViTinh_Search" />
+  </wsdl:message>
+  <wsdl:message name="IDonViTinh_DonViTinh_Search_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonViTinh_SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDonViTinh_DonViTinh_Search_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/System" name="detail" element="q25:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IDonViTinh_DonViTinh_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonViTinh_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IDonViTinh_DonViTinh_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonViTinh_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDonViTinh_DonViTinh_Insert_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/System" name="detail" element="q26:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IDonViTinh_DonViTinh_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonViTinh_Update" />
+  </wsdl:message>
+  <wsdl:message name="IDonViTinh_DonViTinh_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonViTinh_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDonViTinh_DonViTinh_Update_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/System" name="detail" element="q27:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IDonViTinh_DonViTinh_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonViTinh_Delete" />
+  </wsdl:message>
+  <wsdl:message name="IDonViTinh_DonViTinh_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonViTinh_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDonViTinh_DonViTinh_Delete_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/System" name="detail" element="q28:Exception" />
+  </wsdl:message>
+  <wsdl:message name="INhomSanPham_NhomSanPham_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhomSanPham_GetData" />
+  </wsdl:message>
+  <wsdl:message name="INhomSanPham_NhomSanPham_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhomSanPham_GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="INhomSanPham_NhomSanPham_GetData_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/System" name="detail" element="q29:Exception" />
+  </wsdl:message>
+  <wsdl:message name="INhomSanPham_NhomSanPham_Search_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhomSanPham_Search" />
+  </wsdl:message>
+  <wsdl:message name="INhomSanPham_NhomSanPham_Search_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhomSanPham_SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="INhomSanPham_NhomSanPham_Search_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/System" name="detail" element="q30:Exception" />
+  </wsdl:message>
+  <wsdl:message name="INhomSanPham_NhomSanPham_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhomSanPham_Insert" />
+  </wsdl:message>
+  <wsdl:message name="INhomSanPham_NhomSanPham_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhomSanPham_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="INhomSanPham_NhomSanPham_Insert_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/System" name="detail" element="q31:Exception" />
+  </wsdl:message>
+  <wsdl:message name="INhomSanPham_NhomSanPham_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhomSanPham_Update" />
+  </wsdl:message>
+  <wsdl:message name="INhomSanPham_NhomSanPham_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhomSanPham_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="INhomSanPham_NhomSanPham_Update_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/System" name="detail" element="q32:Exception" />
+  </wsdl:message>
+  <wsdl:message name="INhomSanPham_NhomSanPham_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhomSanPham_Delete" />
+  </wsdl:message>
+  <wsdl:message name="INhomSanPham_NhomSanPham_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhomSanPham_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="INhomSanPham_NhomSanPham_Delete_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/System" name="detail" element="q33:Exception" />
+  </wsdl:message>
+  <wsdl:portType name="INhanVien">
+    <wsdl:operation name="NhanVien_CheckLogIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhanVien/NhanVien_CheckLogIn" message="tns:INhanVien_NhanVien_CheckLogIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhanVien/NhanVien_CheckLogInResponse" message="tns:INhanVien_NhanVien_CheckLogIn_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/INhanVien/NhanVien_CheckLogInExceptionFault" name="ExceptionFault" message="tns:INhanVien_NhanVien_CheckLogIn_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NhanVien_GetNhanVien">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhanVien/NhanVien_GetNhanVien" message="tns:INhanVien_NhanVien_GetNhanVien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhanVien/NhanVien_GetNhanVienResponse" message="tns:INhanVien_NhanVien_GetNhanVien_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/INhanVien/NhanVien_GetNhanVienExceptionFault" name="ExceptionFault" message="tns:INhanVien_NhanVien_GetNhanVien_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NhanVien_GetNhanVienByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhanVien/NhanVien_GetNhanVienByID" message="tns:INhanVien_NhanVien_GetNhanVienByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhanVien/NhanVien_GetNhanVienByIDResponse" message="tns:INhanVien_NhanVien_GetNhanVienByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/INhanVien/NhanVien_GetNhanVienByIDExceptionFault" name="ExceptionFault" message="tns:INhanVien_NhanVien_GetNhanVienByID_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NhanVien_UpdatePersonalInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhanVien/NhanVien_UpdatePersonalInfo" message="tns:INhanVien_NhanVien_UpdatePersonalInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhanVien/NhanVien_UpdatePersonalInfoResponse" message="tns:INhanVien_NhanVien_UpdatePersonalInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/INhanVien/NhanVien_UpdatePersonalInfoExceptionFault" name="ExceptionFault" message="tns:INhanVien_NhanVien_UpdatePersonalInfo_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NhanVien_Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhanVien/NhanVien_Insert" message="tns:INhanVien_NhanVien_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhanVien/NhanVien_InsertResponse" message="tns:INhanVien_NhanVien_Insert_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/INhanVien/NhanVien_InsertExceptionFault" name="ExceptionFault" message="tns:INhanVien_NhanVien_Insert_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NhanVien_Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhanVien/NhanVien_Update" message="tns:INhanVien_NhanVien_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhanVien/NhanVien_UpdateResponse" message="tns:INhanVien_NhanVien_Update_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/INhanVien/NhanVien_UpdateExceptionFault" name="ExceptionFault" message="tns:INhanVien_NhanVien_Update_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NhanVien_Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhanVien/NhanVien_Delete" message="tns:INhanVien_NhanVien_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhanVien/NhanVien_DeleteResponse" message="tns:INhanVien_NhanVien_Delete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/INhanVien/NhanVien_DeleteExceptionFault" name="ExceptionFault" message="tns:INhanVien_NhanVien_Delete_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IPhieuNhap">
+    <wsdl:operation name="PhieuNhap_GetPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_GetPhieuNhap" message="tns:IPhieuNhap_PhieuNhap_GetPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_GetPhieuNhapResponse" message="tns:IPhieuNhap_PhieuNhap_GetPhieuNhap_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_GetPhieuNhapExceptionFault" name="ExceptionFault" message="tns:IPhieuNhap_PhieuNhap_GetPhieuNhap_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PhieuNhap_LoadChiTiet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_LoadChiTiet" message="tns:IPhieuNhap_PhieuNhap_LoadChiTiet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_LoadChiTietResponse" message="tns:IPhieuNhap_PhieuNhap_LoadChiTiet_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_LoadChiTietExceptionFault" name="ExceptionFault" message="tns:IPhieuNhap_PhieuNhap_LoadChiTiet_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PhieuNhap_Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_Delete" message="tns:IPhieuNhap_PhieuNhap_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_DeleteResponse" message="tns:IPhieuNhap_PhieuNhap_Delete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_DeleteExceptionFault" name="ExceptionFault" message="tns:IPhieuNhap_PhieuNhap_Delete_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PhieuNhap_GetNewID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_GetNewID" message="tns:IPhieuNhap_PhieuNhap_GetNewID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_GetNewIDResponse" message="tns:IPhieuNhap_PhieuNhap_GetNewID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_GetNewIDExceptionFault" name="ExceptionFault" message="tns:IPhieuNhap_PhieuNhap_GetNewID_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PhieuNhap_Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_Insert" message="tns:IPhieuNhap_PhieuNhap_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_InsertResponse" message="tns:IPhieuNhap_PhieuNhap_Insert_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_InsertExceptionFault" name="ExceptionFault" message="tns:IPhieuNhap_PhieuNhap_Insert_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PhieuNhap_Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_Update" message="tns:IPhieuNhap_PhieuNhap_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_UpdateResponse" message="tns:IPhieuNhap_PhieuNhap_Update_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPhieuNhap/PhieuNhap_UpdateExceptionFault" name="ExceptionFault" message="tns:IPhieuNhap_PhieuNhap_Update_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IPhieuXuat">
+    <wsdl:operation name="PhieuXuat_GetPhieuXuat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_GetPhieuXuat" message="tns:IPhieuXuat_PhieuXuat_GetPhieuXuat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_GetPhieuXuatResponse" message="tns:IPhieuXuat_PhieuXuat_GetPhieuXuat_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_GetPhieuXuatExceptionFault" name="ExceptionFault" message="tns:IPhieuXuat_PhieuXuat_GetPhieuXuat_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IHoaDon">
+    <wsdl:operation name="HoaDon_GetHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHoaDon/HoaDon_GetHoaDon" message="tns:IHoaDon_HoaDon_GetHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHoaDon/HoaDon_GetHoaDonResponse" message="tns:IHoaDon_HoaDon_GetHoaDon_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IKhachHang">
+    <wsdl:operation name="KhachHang_GetKhachHang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKhachHang/KhachHang_GetKhachHang" message="tns:IKhachHang_KhachHang_GetKhachHang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKhachHang/KhachHang_GetKhachHangResponse" message="tns:IKhachHang_KhachHang_GetKhachHang_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IKhachHang/KhachHang_GetKhachHangExceptionFault" name="ExceptionFault" message="tns:IKhachHang_KhachHang_GetKhachHang_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IPhieuThu">
+    <wsdl:operation name="PhieuThu_GetPhieuThu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhieuThu/PhieuThu_GetPhieuThu" message="tns:IPhieuThu_PhieuThu_GetPhieuThu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhieuThu/PhieuThu_GetPhieuThuResponse" message="tns:IPhieuThu_PhieuThu_GetPhieuThu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPhieuThu/PhieuThu_GetPhieuThuExceptionFault" name="ExceptionFault" message="tns:IPhieuThu_PhieuThu_GetPhieuThu_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ISanPham">
+    <wsdl:operation name="SanPham_GetSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPham/SanPham_GetSanPham" message="tns:ISanPham_SanPham_GetSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPham/SanPham_GetSanPhamResponse" message="tns:ISanPham_SanPham_GetSanPham_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISanPham/SanPham_GetSanPhamExceptionFault" name="ExceptionFault" message="tns:ISanPham_SanPham_GetSanPham_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SanPham_Search">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPham/SanPham_Search" message="tns:ISanPham_SanPham_Search_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPham/SanPham_SearchResponse" message="tns:ISanPham_SanPham_Search_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISanPham/SanPham_SearchExceptionFault" name="ExceptionFault" message="tns:ISanPham_SanPham_Search_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SanPham_Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPham/SanPham_Insert" message="tns:ISanPham_SanPham_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPham/SanPham_InsertResponse" message="tns:ISanPham_SanPham_Insert_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISanPham/SanPham_InsertExceptionFault" name="ExceptionFault" message="tns:ISanPham_SanPham_Insert_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SanPham_Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPham/SanPham_Update" message="tns:ISanPham_SanPham_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPham/SanPham_UpdateResponse" message="tns:ISanPham_SanPham_Update_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISanPham/SanPham_UpdateExceptionFault" name="ExceptionFault" message="tns:ISanPham_SanPham_Update_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SanPham_Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISanPham/SanPham_Delete" message="tns:ISanPham_SanPham_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISanPham/SanPham_DeleteResponse" message="tns:ISanPham_SanPham_Delete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISanPham/SanPham_DeleteExceptionFault" name="ExceptionFault" message="tns:ISanPham_SanPham_Delete_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IDonVi">
+    <wsdl:operation name="DonVi_GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDonVi/DonVi_GetData" message="tns:IDonVi_DonVi_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDonVi/DonVi_GetDataResponse" message="tns:IDonVi_DonVi_GetData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDonVi/DonVi_GetDataExceptionFault" name="ExceptionFault" message="tns:IDonVi_DonVi_GetData_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DonVi_UpdateInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDonVi/DonVi_UpdateInfo" message="tns:IDonVi_DonVi_UpdateInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDonVi/DonVi_UpdateInfoResponse" message="tns:IDonVi_DonVi_UpdateInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDonVi/DonVi_UpdateInfoExceptionFault" name="ExceptionFault" message="tns:IDonVi_DonVi_UpdateInfo_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IDonViTinh">
+    <wsdl:operation name="DonViTinh_GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDonViTinh/DonViTinh_GetData" message="tns:IDonViTinh_DonViTinh_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDonViTinh/DonViTinh_GetDataResponse" message="tns:IDonViTinh_DonViTinh_GetData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDonViTinh/DonViTinh_GetDataExceptionFault" name="ExceptionFault" message="tns:IDonViTinh_DonViTinh_GetData_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DonViTinh_Search">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDonViTinh/DonViTinh_Search" message="tns:IDonViTinh_DonViTinh_Search_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDonViTinh/DonViTinh_SearchResponse" message="tns:IDonViTinh_DonViTinh_Search_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDonViTinh/DonViTinh_SearchExceptionFault" name="ExceptionFault" message="tns:IDonViTinh_DonViTinh_Search_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DonViTinh_Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDonViTinh/DonViTinh_Insert" message="tns:IDonViTinh_DonViTinh_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDonViTinh/DonViTinh_InsertResponse" message="tns:IDonViTinh_DonViTinh_Insert_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDonViTinh/DonViTinh_InsertExceptionFault" name="ExceptionFault" message="tns:IDonViTinh_DonViTinh_Insert_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DonViTinh_Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDonViTinh/DonViTinh_Update" message="tns:IDonViTinh_DonViTinh_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDonViTinh/DonViTinh_UpdateResponse" message="tns:IDonViTinh_DonViTinh_Update_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDonViTinh/DonViTinh_UpdateExceptionFault" name="ExceptionFault" message="tns:IDonViTinh_DonViTinh_Update_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DonViTinh_Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDonViTinh/DonViTinh_Delete" message="tns:IDonViTinh_DonViTinh_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDonViTinh/DonViTinh_DeleteResponse" message="tns:IDonViTinh_DonViTinh_Delete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDonViTinh/DonViTinh_DeleteExceptionFault" name="ExceptionFault" message="tns:IDonViTinh_DonViTinh_Delete_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="INhomSanPham">
+    <wsdl:operation name="NhomSanPham_GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_GetData" message="tns:INhomSanPham_NhomSanPham_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_GetDataResponse" message="tns:INhomSanPham_NhomSanPham_GetData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_GetDataExceptionFault" name="ExceptionFault" message="tns:INhomSanPham_NhomSanPham_GetData_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NhomSanPham_Search">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_Search" message="tns:INhomSanPham_NhomSanPham_Search_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_SearchResponse" message="tns:INhomSanPham_NhomSanPham_Search_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_SearchExceptionFault" name="ExceptionFault" message="tns:INhomSanPham_NhomSanPham_Search_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NhomSanPham_Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_Insert" message="tns:INhomSanPham_NhomSanPham_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_InsertResponse" message="tns:INhomSanPham_NhomSanPham_Insert_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_InsertExceptionFault" name="ExceptionFault" message="tns:INhomSanPham_NhomSanPham_Insert_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NhomSanPham_Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_Update" message="tns:INhomSanPham_NhomSanPham_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_UpdateResponse" message="tns:INhomSanPham_NhomSanPham_Update_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_UpdateExceptionFault" name="ExceptionFault" message="tns:INhomSanPham_NhomSanPham_Update_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NhomSanPham_Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_Delete" message="tns:INhomSanPham_NhomSanPham_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_DeleteResponse" message="tns:INhomSanPham_NhomSanPham_Delete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_DeleteExceptionFault" name="ExceptionFault" message="tns:INhomSanPham_NhomSanPham_Delete_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_INhanVien" type="tns:INhanVien">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NhanVien_CheckLogIn">
+      <soap:operation soapAction="http://tempuri.org/INhanVien/NhanVien_CheckLogIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NhanVien_GetNhanVien">
+      <soap:operation soapAction="http://tempuri.org/INhanVien/NhanVien_GetNhanVien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NhanVien_GetNhanVienByID">
+      <soap:operation soapAction="http://tempuri.org/INhanVien/NhanVien_GetNhanVienByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NhanVien_UpdatePersonalInfo">
+      <soap:operation soapAction="http://tempuri.org/INhanVien/NhanVien_UpdatePersonalInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NhanVien_Insert">
+      <soap:operation soapAction="http://tempuri.org/INhanVien/NhanVien_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NhanVien_Update">
+      <soap:operation soapAction="http://tempuri.org/INhanVien/NhanVien_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NhanVien_Delete">
+      <soap:operation soapAction="http://tempuri.org/INhanVien/NhanVien_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IPhieuNhap" type="tns:IPhieuNhap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PhieuNhap_GetPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IPhieuNhap/PhieuNhap_GetPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PhieuNhap_LoadChiTiet">
+      <soap:operation soapAction="http://tempuri.org/IPhieuNhap/PhieuNhap_LoadChiTiet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PhieuNhap_Delete">
+      <soap:operation soapAction="http://tempuri.org/IPhieuNhap/PhieuNhap_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PhieuNhap_GetNewID">
+      <soap:operation soapAction="http://tempuri.org/IPhieuNhap/PhieuNhap_GetNewID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PhieuNhap_Insert">
+      <soap:operation soapAction="http://tempuri.org/IPhieuNhap/PhieuNhap_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PhieuNhap_Update">
+      <soap:operation soapAction="http://tempuri.org/IPhieuNhap/PhieuNhap_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IPhieuXuat" type="tns:IPhieuXuat">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PhieuXuat_GetPhieuXuat">
+      <soap:operation soapAction="http://tempuri.org/IPhieuXuat/PhieuXuat_GetPhieuXuat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IHoaDon" type="tns:IHoaDon">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HoaDon_GetHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IHoaDon/HoaDon_GetHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IKhachHang" type="tns:IKhachHang">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="KhachHang_GetKhachHang">
+      <soap:operation soapAction="http://tempuri.org/IKhachHang/KhachHang_GetKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IPhieuThu" type="tns:IPhieuThu">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PhieuThu_GetPhieuThu">
+      <soap:operation soapAction="http://tempuri.org/IPhieuThu/PhieuThu_GetPhieuThu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_ISanPham" type="tns:ISanPham">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SanPham_GetSanPham">
+      <soap:operation soapAction="http://tempuri.org/ISanPham/SanPham_GetSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SanPham_Search">
+      <soap:operation soapAction="http://tempuri.org/ISanPham/SanPham_Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SanPham_Insert">
+      <soap:operation soapAction="http://tempuri.org/ISanPham/SanPham_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SanPham_Update">
+      <soap:operation soapAction="http://tempuri.org/ISanPham/SanPham_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SanPham_Delete">
+      <soap:operation soapAction="http://tempuri.org/ISanPham/SanPham_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IDonVi" type="tns:IDonVi">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DonVi_GetData">
+      <soap:operation soapAction="http://tempuri.org/IDonVi/DonVi_GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DonVi_UpdateInfo">
+      <soap:operation soapAction="http://tempuri.org/IDonVi/DonVi_UpdateInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IDonViTinh" type="tns:IDonViTinh">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DonViTinh_GetData">
+      <soap:operation soapAction="http://tempuri.org/IDonViTinh/DonViTinh_GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DonViTinh_Search">
+      <soap:operation soapAction="http://tempuri.org/IDonViTinh/DonViTinh_Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DonViTinh_Insert">
+      <soap:operation soapAction="http://tempuri.org/IDonViTinh/DonViTinh_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DonViTinh_Update">
+      <soap:operation soapAction="http://tempuri.org/IDonViTinh/DonViTinh_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DonViTinh_Delete">
+      <soap:operation soapAction="http://tempuri.org/IDonViTinh/DonViTinh_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_INhomSanPham" type="tns:INhomSanPham">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NhomSanPham_GetData">
+      <soap:operation soapAction="http://tempuri.org/INhomSanPham/NhomSanPham_GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NhomSanPham_Search">
+      <soap:operation soapAction="http://tempuri.org/INhomSanPham/NhomSanPham_Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NhomSanPham_Insert">
+      <soap:operation soapAction="http://tempuri.org/INhomSanPham/NhomSanPham_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NhomSanPham_Update">
+      <soap:operation soapAction="http://tempuri.org/INhomSanPham/NhomSanPham_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NhomSanPham_Delete">
+      <soap:operation soapAction="http://tempuri.org/INhomSanPham/NhomSanPham_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BanHangService">
+    <wsdl:port name="BasicHttpBinding_INhanVien" binding="tns:BasicHttpBinding_INhanVien">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/NhanVien" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IPhieuNhap" binding="tns:BasicHttpBinding_IPhieuNhap">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/PhieuNhap" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IPhieuXuat" binding="tns:BasicHttpBinding_IPhieuXuat">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/PhieuXuat" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IHoaDon" binding="tns:BasicHttpBinding_IHoaDon">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/HoaDon" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IKhachHang" binding="tns:BasicHttpBinding_IKhachHang">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/KhachHang" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IPhieuThu" binding="tns:BasicHttpBinding_IPhieuThu">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/PhieuThu" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_ISanPham" binding="tns:BasicHttpBinding_ISanPham">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/SanPham" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IDonVi" binding="tns:BasicHttpBinding_IDonVi">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/DonVi" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IDonViTinh" binding="tns:BasicHttpBinding_IDonViTinh">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/DonViTinh" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_INhomSanPham" binding="tns:BasicHttpBinding_INhomSanPham">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/NhomSanPham" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="92d971fe-131c-4042-afe3-db22821f3579" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="8fd80d7b-c03d-4930-bede-c6310e543b63" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="57543790-3ac7-4253-b107-ea0217aa691f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="5614c777-0770-456d-ac1d-bd7b03d487ad" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/mex" />
+    <MetadataFile FileName="System.xsd" MetadataType="Schema" ID="90cd3242-9c1c-455d-9edf-01388659cc0d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/mex" />
+    <MetadataFile FileName="QuanLiBanHang_BDO.xsd" MetadataType="Schema" ID="d179c78e-c8dc-4743-8907-05bad75bde90" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="b8c3e943-53f1-4abf-bc8c-27b184838bb4" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

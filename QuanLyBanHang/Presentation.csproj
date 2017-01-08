@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{94004E0E-C456-4768-A504-FF9C8379D79B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyBanHang</RootNamespace>
+    <AssemblyName>QuanLyBanHang</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>inventory-maintenance.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>QuanLyBanHang.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v15.2.Core, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v15.2.Drawing, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPdfViewer.v15.2, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Main.Designer.cs">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuDanhMuc\uc_ProductUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuDanhMuc\uc_ProductUnit.Designer.cs">
+      <DependentUpon>uc_ProductUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuDanhMuc\uc_Product.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuDanhMuc\uc_Product.Designer.cs">
+      <DependentUpon>uc_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuDanhMuc\uc_ProductGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuDanhMuc\uc_ProductGroup.Designer.cs">
+      <DependentUpon>uc_ProductGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuHeThong\uc_Support.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuHeThong\uc_Support.Designer.cs">
+      <DependentUpon>uc_Support.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuHeThong\uc_UnitInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuHeThong\uc_UnitInfo.Designer.cs">
+      <DependentUpon>uc_UnitInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuHeThong\uc_UserInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuHeThong\uc_UserInfo.Designer.cs">
+      <DependentUpon>uc_UserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuNhanVien\uc_StaffList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuNhanVien\uc_StaffList.Designer.cs">
+      <DependentUpon>uc_StaffList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuXuatNhapKho\uc_InInvenCreate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuXuatNhapKho\uc_InInvenCreate.Designer.cs">
+      <DependentUpon>uc_InInvenCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuXuatNhapKho\uc_InInvenList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuXuatNhapKho\uc_InInvenList.Designer.cs">
+      <DependentUpon>uc_InInvenList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\BanHangService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frm_Login.en.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.vi-VN.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Main.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuDanhMuc\uc_ProductUnit.resx">
+      <DependentUpon>uc_ProductUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuDanhMuc\uc_Product.resx">
+      <DependentUpon>uc_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuDanhMuc\uc_ProductGroup.resx">
+      <DependentUpon>uc_ProductGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuHeThong\uc_Support.resx">
+      <DependentUpon>uc_Support.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuHeThong\uc_UnitInfo.resx">
+      <DependentUpon>uc_UnitInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuHeThong\uc_UserInfo.resx">
+      <DependentUpon>uc_UserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuNhanVien\uc_StaffList.resx">
+      <DependentUpon>uc_StaffList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuXuatNhapKho\uc_InInvenCreate.resx">
+      <DependentUpon>uc_InInvenCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuXuatNhapKho\uc_InInvenList.resx">
+      <DependentUpon>uc_InInvenList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\BanHangService\QuanLiBanHang_BDO.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.DonVi.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.DonViTinh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.NhanVien.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.NhomSanPham.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.PhieuNhapCT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.SanPham.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\service.wsdl" />
+    <None Include="Service References\BanHangService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanHangService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanHangService\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanHangService\System.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dangnhap1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dangnhap2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thoat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thoat2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cong-no-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\danh-muc-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\he-thong-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhan-vien-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thong-ke-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xuat-nhap-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cong-no-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\danh-muc-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\he-thong-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhan-vien-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thong-ke-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xuat-nhap-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_but.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\del.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main activity.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="inventory-maintenance.ico" />
+    <None Include="Resources\basket_add.png" />
+    <None Include="Service References\BanHangService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\BanHangService\configuration.svcinfo" />
+    <None Include="Service References\BanHangService\configuration91.svcinfo" />
+    <None Include="Resources\userdefault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\BanHangService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
