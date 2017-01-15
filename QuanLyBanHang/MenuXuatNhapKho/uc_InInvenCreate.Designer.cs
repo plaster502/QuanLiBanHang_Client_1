@@ -49,12 +49,13 @@
             this.lb_DonGia = new System.Windows.Forms.Label();
             this.txt_DonGia = new System.Windows.Forms.TextBox();
             this.txt_SoLuong = new System.Windows.Forms.TextBox();
-            this.btn_AddProduct = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_Luu = new DevExpress.XtraEditors.SimpleButton();
             this.dgv_DanhSachChiTiet = new System.Windows.Forms.DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btn_AddProduct = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_Luu = new DevExpress.XtraEditors.SimpleButton();
             this.pn_Nav.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.grb_ChiTietPhieu.SuspendLayout();
@@ -207,7 +208,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.5493F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.4507F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 261F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 263F));
             this.tableLayoutPanel2.Controls.Add(this.lb_SoLuong, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.lb_MaSanPham, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txt_MaSanPham, 1, 0);
@@ -244,7 +245,7 @@
             this.lb_MaSanPham.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_MaSanPham.AutoSize = true;
             this.lb_MaSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lb_MaSanPham.Location = new System.Drawing.Point(5, 14);
+            this.lb_MaSanPham.Location = new System.Drawing.Point(4, 14);
             this.lb_MaSanPham.Name = "lb_MaSanPham";
             this.lb_MaSanPham.Size = new System.Drawing.Size(105, 20);
             this.lb_MaSanPham.TabIndex = 1;
@@ -254,18 +255,18 @@
             // 
             this.txt_MaSanPham.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_MaSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_MaSanPham.Location = new System.Drawing.Point(118, 11);
+            this.txt_MaSanPham.Location = new System.Drawing.Point(117, 11);
             this.txt_MaSanPham.Name = "txt_MaSanPham";
-            this.txt_MaSanPham.Size = new System.Drawing.Size(156, 26);
+            this.txt_MaSanPham.Size = new System.Drawing.Size(155, 26);
             this.txt_MaSanPham.TabIndex = 2;
-            this.txt_MaSanPham.TextChanged += new System.EventHandler(this.txt_MaSach_TextChanged);
+            this.txt_MaSanPham.TextChanged += new System.EventHandler(this.txt_MaSanPham_TextChanged);
             // 
             // lb_TenSanPham
             // 
             this.lb_TenSanPham.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_TenSanPham.AutoSize = true;
             this.lb_TenSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lb_TenSanPham.Location = new System.Drawing.Point(288, 4);
+            this.lb_TenSanPham.Location = new System.Drawing.Point(286, 4);
             this.lb_TenSanPham.Name = "lb_TenSanPham";
             this.lb_TenSanPham.Size = new System.Drawing.Size(70, 40);
             this.lb_TenSanPham.TabIndex = 3;
@@ -275,18 +276,18 @@
             // 
             this.txt_TenSanPham.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_TenSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_TenSanPham.Location = new System.Drawing.Point(389, 11);
+            this.txt_TenSanPham.Location = new System.Drawing.Point(388, 11);
             this.txt_TenSanPham.Name = "txt_TenSanPham";
             this.txt_TenSanPham.Size = new System.Drawing.Size(223, 26);
             this.txt_TenSanPham.TabIndex = 4;
-            this.txt_TenSanPham.TextChanged += new System.EventHandler(this.txt_TenSach_TextChanged);
+            this.txt_TenSanPham.TextChanged += new System.EventHandler(this.txt_TenSanPham_TextChanged);
             // 
             // lb_DonGia
             // 
             this.lb_DonGia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_DonGia.AutoSize = true;
             this.lb_DonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lb_DonGia.Location = new System.Drawing.Point(291, 62);
+            this.lb_DonGia.Location = new System.Drawing.Point(289, 62);
             this.lb_DonGia.Name = "lb_DonGia";
             this.lb_DonGia.Size = new System.Drawing.Size(64, 20);
             this.lb_DonGia.TabIndex = 7;
@@ -296,7 +297,7 @@
             // 
             this.txt_DonGia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_DonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_DonGia.Location = new System.Drawing.Point(389, 59);
+            this.txt_DonGia.Location = new System.Drawing.Point(388, 59);
             this.txt_DonGia.Name = "txt_DonGia";
             this.txt_DonGia.Size = new System.Drawing.Size(223, 26);
             this.txt_DonGia.TabIndex = 8;
@@ -305,23 +306,10 @@
             // 
             this.txt_SoLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_SoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_SoLuong.Location = new System.Drawing.Point(118, 59);
+            this.txt_SoLuong.Location = new System.Drawing.Point(117, 59);
             this.txt_SoLuong.Name = "txt_SoLuong";
-            this.txt_SoLuong.Size = new System.Drawing.Size(156, 26);
+            this.txt_SoLuong.Size = new System.Drawing.Size(155, 26);
             this.txt_SoLuong.TabIndex = 6;
-            // 
-            // btn_AddProduct
-            // 
-            this.btn_AddProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_AddProduct.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_AddProduct.Appearance.Options.UseFont = true;
-            this.btn_AddProduct.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddProduct.Image")));
-            this.btn_AddProduct.Location = new System.Drawing.Point(432, 99);
-            this.btn_AddProduct.Name = "btn_AddProduct";
-            this.btn_AddProduct.Size = new System.Drawing.Size(197, 33);
-            this.btn_AddProduct.TabIndex = 8;
-            this.btn_AddProduct.Text = "Thêm sách vào phiếu";
-            this.btn_AddProduct.Click += new System.EventHandler(this.btn_AddProduct_Click);
             // 
             // panel1
             // 
@@ -332,20 +320,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(638, 39);
             this.panel1.TabIndex = 9;
-            // 
-            // btn_Luu
-            // 
-            this.btn_Luu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Luu.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_Luu.Appearance.Options.UseFont = true;
-            this.btn_Luu.Image = ((System.Drawing.Image)(resources.GetObject("btn_Luu.Image")));
-            this.btn_Luu.Location = new System.Drawing.Point(257, 3);
-            this.btn_Luu.Name = "btn_Luu";
-            this.btn_Luu.Size = new System.Drawing.Size(94, 33);
-            this.btn_Luu.TabIndex = 0;
-            this.btn_Luu.Text = "Lưu";
-            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // dgv_DanhSachChiTiet
             // 
@@ -369,6 +343,16 @@
             this.STT.HeaderText = "STT";
             this.STT.Name = "STT";
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Xoá";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn1.Width = 356;
+            // 
             // Delete
             // 
             this.Delete.HeaderText = "Xoá";
@@ -377,6 +361,33 @@
             this.Delete.Name = "Delete";
             this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // btn_AddProduct
+            // 
+            this.btn_AddProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_AddProduct.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_AddProduct.Appearance.Options.UseFont = true;
+            this.btn_AddProduct.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddProduct.Image")));
+            this.btn_AddProduct.Location = new System.Drawing.Point(388, 99);
+            this.btn_AddProduct.Name = "btn_AddProduct";
+            this.btn_AddProduct.Size = new System.Drawing.Size(241, 33);
+            this.btn_AddProduct.TabIndex = 8;
+            this.btn_AddProduct.Text = "Thêm sản phẩm vào phiếu";
+            this.btn_AddProduct.Click += new System.EventHandler(this.btn_AddProduct_Click);
+            // 
+            // btn_Luu
+            // 
+            this.btn_Luu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Luu.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_Luu.Appearance.Options.UseFont = true;
+            this.btn_Luu.Image = ((System.Drawing.Image)(resources.GetObject("btn_Luu.Image")));
+            this.btn_Luu.Location = new System.Drawing.Point(257, 3);
+            this.btn_Luu.Name = "btn_Luu";
+            this.btn_Luu.Size = new System.Drawing.Size(94, 33);
+            this.btn_Luu.TabIndex = 0;
+            this.btn_Luu.Text = "Lưu";
+            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // uc_InInvenCreate
             // 
@@ -428,5 +439,6 @@
         private DevExpress.XtraEditors.SimpleButton btn_Luu;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
     }
 }

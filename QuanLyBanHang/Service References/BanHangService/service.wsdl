@@ -312,6 +312,60 @@
   <wsdl:message name="INhomSanPham_NhomSanPham_Delete_ExceptionFault_FaultMessage">
     <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/System" name="detail" element="q33:Exception" />
   </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_GetBaoGia_InputMessage">
+    <wsdl:part name="parameters" element="tns:BaoGia_GetBaoGia" />
+  </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_GetBaoGia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BaoGia_GetBaoGiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_GetBaoGia_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/System" name="detail" element="q34:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_LoadChiTiet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BaoGia_LoadChiTiet" />
+  </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_LoadChiTiet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BaoGia_LoadChiTietResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_LoadChiTiet_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/System" name="detail" element="q35:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:BaoGia_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BaoGia_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_Insert_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/System" name="detail" element="q36:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:BaoGia_Update" />
+  </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BaoGia_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_Update_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/System" name="detail" element="q37:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:BaoGia_Delete" />
+  </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BaoGia_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_Delete_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/System" name="detail" element="q38:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_GetNewID_InputMessage">
+    <wsdl:part name="parameters" element="tns:BaoGia_GetNewID" />
+  </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_GetNewID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BaoGia_GetNewIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaoGia_BaoGia_GetNewID_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/System" name="detail" element="q39:Exception" />
+  </wsdl:message>
   <wsdl:portType name="INhanVien">
     <wsdl:operation name="NhanVien_CheckLogIn">
       <wsdl:input wsaw:Action="http://tempuri.org/INhanVien/NhanVien_CheckLogIn" message="tns:INhanVien_NhanVien_CheckLogIn_InputMessage" />
@@ -499,6 +553,38 @@
       <wsdl:input wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_Delete" message="tns:INhomSanPham_NhomSanPham_Delete_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_DeleteResponse" message="tns:INhomSanPham_NhomSanPham_Delete_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/INhomSanPham/NhomSanPham_DeleteExceptionFault" name="ExceptionFault" message="tns:INhomSanPham_NhomSanPham_Delete_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IBaoGia">
+    <wsdl:operation name="BaoGia_GetBaoGia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_GetBaoGia" message="tns:IBaoGia_BaoGia_GetBaoGia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_GetBaoGiaResponse" message="tns:IBaoGia_BaoGia_GetBaoGia_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_GetBaoGiaExceptionFault" name="ExceptionFault" message="tns:IBaoGia_BaoGia_GetBaoGia_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BaoGia_LoadChiTiet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_LoadChiTiet" message="tns:IBaoGia_BaoGia_LoadChiTiet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_LoadChiTietResponse" message="tns:IBaoGia_BaoGia_LoadChiTiet_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_LoadChiTietExceptionFault" name="ExceptionFault" message="tns:IBaoGia_BaoGia_LoadChiTiet_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BaoGia_Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_Insert" message="tns:IBaoGia_BaoGia_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_InsertResponse" message="tns:IBaoGia_BaoGia_Insert_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_InsertExceptionFault" name="ExceptionFault" message="tns:IBaoGia_BaoGia_Insert_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BaoGia_Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_Update" message="tns:IBaoGia_BaoGia_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_UpdateResponse" message="tns:IBaoGia_BaoGia_Update_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_UpdateExceptionFault" name="ExceptionFault" message="tns:IBaoGia_BaoGia_Update_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BaoGia_Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_Delete" message="tns:IBaoGia_BaoGia_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_DeleteResponse" message="tns:IBaoGia_BaoGia_Delete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_DeleteExceptionFault" name="ExceptionFault" message="tns:IBaoGia_BaoGia_Delete_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BaoGia_GetNewID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_GetNewID" message="tns:IBaoGia_BaoGia_GetNewID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_GetNewIDResponse" message="tns:IBaoGia_BaoGia_GetNewID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_GetNewIDExceptionFault" name="ExceptionFault" message="tns:IBaoGia_BaoGia_GetNewID_ExceptionFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_INhanVien" type="tns:INhanVien">
@@ -936,6 +1022,81 @@
       </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IBaoGia" type="tns:IBaoGia">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BaoGia_GetBaoGia">
+      <soap:operation soapAction="http://tempuri.org/IBaoGia/BaoGia_GetBaoGia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BaoGia_LoadChiTiet">
+      <soap:operation soapAction="http://tempuri.org/IBaoGia/BaoGia_LoadChiTiet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BaoGia_Insert">
+      <soap:operation soapAction="http://tempuri.org/IBaoGia/BaoGia_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BaoGia_Update">
+      <soap:operation soapAction="http://tempuri.org/IBaoGia/BaoGia_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BaoGia_Delete">
+      <soap:operation soapAction="http://tempuri.org/IBaoGia/BaoGia_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BaoGia_GetNewID">
+      <soap:operation soapAction="http://tempuri.org/IBaoGia/BaoGia_GetNewID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
   <wsdl:service name="BanHangService">
     <wsdl:port name="BasicHttpBinding_INhanVien" binding="tns:BasicHttpBinding_INhanVien">
       <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/NhanVien" />
@@ -966,6 +1127,9 @@
     </wsdl:port>
     <wsdl:port name="BasicHttpBinding_INhomSanPham" binding="tns:BasicHttpBinding_INhomSanPham">
       <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/NhomSanPham" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IBaoGia" binding="tns:BasicHttpBinding_IBaoGia">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/BaoGia" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

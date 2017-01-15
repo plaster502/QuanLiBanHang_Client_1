@@ -94,6 +94,18 @@
     <Compile Include="frm_Main.Designer.cs">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuBanHang\uc_QuoteCreate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBanHang\uc_QuoteCreate.Designer.cs">
+      <DependentUpon>uc_QuoteCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBanHang\uc_QuoteList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBanHang\uc_QuoteList.Designer.cs">
+      <DependentUpon>uc_QuoteList.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuDanhMuc\uc_ProductUnit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -167,6 +179,12 @@
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuBanHang\uc_QuoteCreate.resx">
+      <DependentUpon>uc_QuoteCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBanHang\uc_QuoteList.resx">
+      <DependentUpon>uc_QuoteList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuDanhMuc\uc_ProductUnit.resx">
       <DependentUpon>uc_ProductUnit.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +235,9 @@
     </Compile>
     <None Include="Service References\BanHangService\QuanLiBanHang_BDO.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.BaoGiaCT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.DonVi.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -344,6 +365,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\BanHangService\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
