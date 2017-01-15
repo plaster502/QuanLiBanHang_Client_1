@@ -1,46 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Data;
+﻿using System.Data;
 using System.Windows.Forms;
 using QuanLyBanHang.BanHangService;
+using System;
+using System.Drawing;
+using System.Collections.Generic;
 
-namespace QuanLyBanHang.MenuXuatNhapKho
+namespace QuanLyBanHang.MenuBanHang
 {
-    public partial class uc_InInvenCreate : UserControl
+    public partial class uc_QuoteCreate : UserControl
     {
-        PhieuNhap pn = new PhieuNhap();
+        BaoGia bg = new BaoGia();
         DataTable sanpham = new DataTable();//Ds sp được phép nhập
         bool IsInsertOrUpdate = false; //Flag false:Update
 
         #region Contructor
-        public uc_InInvenCreate()
+        public uc_QuoteCreate()
         {
             InitializeComponent();
             IsInsertOrUpdate = true;
         }
-        public uc_InInvenCreate(PhieuNhap pn_detail, bool isInsert)
+        public uc_QuoteCreate(BaoGia _detail, bool isInsert)
         {
             InitializeComponent();
-            this.pn = pn_detail;
+            this.bg = _detail;
             IsInsertOrUpdate = isInsert;
         }
         #endregion
 
         #region Load dữ liệu
-        private void uc_InInvenCreate_Load(object sender, EventArgs e)
+        private void uc_QuoteCreate_Load(object sender, System.EventArgs e)
         {
             try
             {
-                PhieuNhapClient client = new PhieuNhapClient();
+                BaoGiaClient client = new BaoGiaClient();
                 DataTable dtb = new DataTable();
                 dtb.Columns.Add("MaSanPham");
                 dtb.Columns.Add("SoLuong");
                 dtb.Columns.Add("DonGia");
-                if (string.IsNullOrEmpty(pn.MaPhieuNhap))//Insert
+                if (string.IsNullOrEmpty(bg.MaBaoGia))//Insert
                 {
-                    txt_MaPhieuNhap.Text =client.PhieuNhap_GetNewID(DateTime.Today.Year, DateTime.Today.Month);
-                    txt_MaPhieuNhap.Enabled = false;
+                    txt_MaBaoGia.Text = client.BaoGia_GetNewID(DateTime.Today.Year, DateTime.Today.Month);
+                    txt_MaBaoGia.Enabled = false;
                     txt_TongTien.Text = "0";
                     txt_TongTien.Enabled = false;
                     LoadMaNhanVien();
@@ -49,13 +49,15 @@ namespace QuanLyBanHang.MenuXuatNhapKho
                 }
                 else//Update or Detail
                 {
-                    txt_MaPhieuNhap.Text = pn.MaPhieuNhap;
-                    txt_MaPhieuNhap.Enabled = false;
-                    msk_NgayNhap.Text = pn.NgayNhap.ToString("dd/MM/yyyy");
-                    txt_NhanVien.Text = pn.MaNhanVien.ToString();
-                    txt_TongTien.Text = pn.TongTien.ToString("#,##");
+                    txt_MaBaoGia.Text = bg.MaBaoGia;
+                    txt_MaBaoGia.Enabled = false;
+                    msk_NgayLap.Text = bg.NgayTao.ToString("dd/MM/yyyy");
+                    msk_NgayHetHan.Text = bg.NgayHetHan.ToString("dd/MM/yyyy");
+                    txt_NhanVien.Text = bg.MaNhanVien.ToString();
+                    txt_ChietKhau.Text = bg.ChietKhau.ToString("#,##");
+                    txt_TongTien.Text = bg.TongTien.ToString("#,##");
                     txt_TongTien.Enabled = false;
-                    foreach (PhieuNhapCT ct in pn.DSChiTiet)
+                    foreach (BaoGiaCT ct in bg.DSChiTiet)
                     {
                         DataRow row = dtb.NewRow();
                         row["MaSanPham"] = ct.MaSanPham;
@@ -66,8 +68,10 @@ namespace QuanLyBanHang.MenuXuatNhapKho
                     dgv_DanhSachChiTiet.DataSource = dtb;
                     if (IsInsertOrUpdate)
                     {
-                        msk_NgayNhap.Enabled = false;
+                        msk_NgayLap.Enabled = false;
+                        msk_NgayHetHan.Enabled = false;
                         txt_NhanVien.Enabled = false;
+                        txt_ChietKhau.Enabled = false;
                         btn_AddProduct.Visible = false;
                         btn_Luu.Visible = false;
 
@@ -134,7 +138,7 @@ namespace QuanLyBanHang.MenuXuatNhapKho
                 throw ex;
             }
         }
-        
+
         private void FormatGrid()
         {
             try
@@ -199,7 +203,6 @@ namespace QuanLyBanHang.MenuXuatNhapKho
             }
         }
         #endregion
-
 
         //Tính tổng tiền
         private decimal Sum()
@@ -276,38 +279,45 @@ namespace QuanLyBanHang.MenuXuatNhapKho
         {
             try
             {
-                PhieuNhapClient client = new PhieuNhapClient();
-                PhieuNhap pn = new PhieuNhap();
-                pn.MaPhieuNhap = txt_MaPhieuNhap.Text;
-                pn.NgayNhap = Convert.ToDateTime(msk_NgayNhap.Text);
-                pn.MaNhanVien = txt_NhanVien.Text;
-                pn.TongTien = Convert.ToDecimal(txt_TongTien.Text);
-                List<PhieuNhapCT> dsct = new List<PhieuNhapCT>();
+                BaoGiaClient client = new BaoGiaClient();
+                BaoGia bg = new BaoGia();
+                bg.MaBaoGia = txt_MaBaoGia.Text;
+                bg.NgayTao = Convert.ToDateTime(msk_NgayLap.Text);
+                bg.NgayHetHan = Convert.ToDateTime(msk_NgayHetHan.Text);
+                bg.MaNhanVien = txt_NhanVien.Text;
+                bg.TongTien = Convert.ToDecimal(txt_TongTien.Text);
+                if (!string.IsNullOrEmpty(txt_ChietKhau.Text))
+                    bg.ChietKhau = Convert.ToDecimal(txt_ChietKhau.Text);
+                else
+                    bg.ChietKhau = 0;
+                List<BaoGiaCT> dsct = new List<BaoGiaCT>();
                 foreach (DataGridViewRow row in dgv_DanhSachChiTiet.Rows)
                 {
-                    PhieuNhapCT ct = new PhieuNhapCT();
-                    ct.MaPhieuNhap = txt_MaPhieuNhap.Text;
+                    BaoGiaCT ct = new BaoGiaCT();
+                    ct.MaBaoGia = txt_MaBaoGia.Text;
                     ct.MaSanPham = row.Cells["MaSanPham"].Value.ToString();
                     ct.SoLuong = Convert.ToInt32(row.Cells["SoLuong"].Value);
                     ct.DonGia = Convert.ToDecimal(row.Cells["DonGia"].Value);
                     dsct.Add(ct);
                 }
-                pn.DSChiTiet = dsct.ToArray();
+                bg.DSChiTiet = dsct.ToArray();
                 if (IsInsertOrUpdate && !Checknull())
                 {
-                    if (client.PhieuNhap_Insert(pn))
+                    if (client.BaoGia_Insert(bg))
                     {
-                        MessageBox.Show("Thêm phiếu nhập thành công");
+                        MessageBox.Show("Thêm báo giá thành công");
                         DataTable dtb = new DataTable();
                         dtb.Columns.Add("MaSanPham");
                         dtb.Columns.Add("SoLuong");
                         dtb.Columns.Add("DonGia");
-                        txt_MaPhieuNhap.Text = client.PhieuNhap_GetNewID(DateTime.Today.Year, DateTime.Today.Month);
-                        txt_MaPhieuNhap.Enabled = false;
+                        txt_MaBaoGia.Text = client.BaoGia_GetNewID(DateTime.Today.Year, DateTime.Today.Month);
+                        txt_MaBaoGia.Enabled = false;
                         txt_NhanVien.Text = "";
-                        msk_NgayNhap.Text = "";
+                        msk_NgayLap.Text = "";
+                        msk_NgayHetHan.Text = "";
                         txt_TongTien.Text = "0";
                         txt_TongTien.Enabled = false;
+                        txt_ChietKhau.Text = "0";
                         txt_MaSanPham.Text = "";
                         txt_TenSanPham.Text = "";
                         txt_SoLuong.Text = "";
@@ -323,7 +333,7 @@ namespace QuanLyBanHang.MenuXuatNhapKho
                 }
                 else if (!IsInsertOrUpdate && !Checknull())
                 {
-                    if (client.PhieuNhap_Update(pn))
+                    if (client.BaoGia_Update(bg))
                     {
                         MessageBox.Show("Cập nhật phiếu nhập thành công");
                     }
@@ -340,9 +350,14 @@ namespace QuanLyBanHang.MenuXuatNhapKho
         }
         private bool Checknull()
         {
-            if (msk_NgayNhap.Text.Trim() == "/  /")
+            if (msk_NgayLap.Text.Trim() == "/  /")
             {
-                MessageBox.Show("Thiếu ngày nhập");
+                MessageBox.Show("Thiếu ngày lập");
+                return true;
+            }
+            if (msk_NgayHetHan.Text.Trim() == "/  ")
+            {
+                MessageBox.Show("Thiếu ngày hết hạn");
                 return true;
             }
             if (string.IsNullOrEmpty(txt_NhanVien.Text))
@@ -358,7 +373,7 @@ namespace QuanLyBanHang.MenuXuatNhapKho
             return false;
         }
 
-        //Xoá sản phẩm khỏi phiếu
+        //Xoá sản phẩm khỏi phiếus
         private void dgv_DanhSachChiTiet_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dgv_DanhSachChiTiet.Columns["Delete"].Index)

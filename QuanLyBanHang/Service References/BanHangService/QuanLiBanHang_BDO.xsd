@@ -179,4 +179,31 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="NhomSanPham" nillable="true" type="tns:NhomSanPham" />
+  <xs:complexType name="BaoGia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChietKhau" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DSChiTiet" nillable="true" type="tns:ArrayOfBaoGiaCT" />
+      <xs:element minOccurs="0" name="MaBaoGia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaNhanVien" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NgayHetHan" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NgayTao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TongTien" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaoGia" nillable="true" type="tns:BaoGia" />
+  <xs:complexType name="ArrayOfBaoGiaCT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BaoGiaCT" nillable="true" type="tns:BaoGiaCT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBaoGiaCT" nillable="true" type="tns:ArrayOfBaoGiaCT" />
+  <xs:complexType name="BaoGiaCT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DonGia" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MaBaoGia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaSanPham" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SoLuong" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaoGiaCT" nillable="true" type="tns:BaoGiaCT" />
 </xs:schema>

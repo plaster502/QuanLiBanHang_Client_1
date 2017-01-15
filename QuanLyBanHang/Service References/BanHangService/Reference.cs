@@ -1638,6 +1638,240 @@ namespace QuanLyBanHang.BanHangService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BaoGia", Namespace="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO")]
+    [System.SerializableAttribute()]
+    public partial class BaoGia : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal ChietKhauField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private QuanLyBanHang.BanHangService.BaoGiaCT[] DSChiTietField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaBaoGiaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaNhanVienField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime NgayHetHanField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime NgayTaoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal TongTienField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal ChietKhau {
+            get {
+                return this.ChietKhauField;
+            }
+            set {
+                if ((this.ChietKhauField.Equals(value) != true)) {
+                    this.ChietKhauField = value;
+                    this.RaisePropertyChanged("ChietKhau");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public QuanLyBanHang.BanHangService.BaoGiaCT[] DSChiTiet {
+            get {
+                return this.DSChiTietField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DSChiTietField, value) != true)) {
+                    this.DSChiTietField = value;
+                    this.RaisePropertyChanged("DSChiTiet");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaBaoGia {
+            get {
+                return this.MaBaoGiaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaBaoGiaField, value) != true)) {
+                    this.MaBaoGiaField = value;
+                    this.RaisePropertyChanged("MaBaoGia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaNhanVien {
+            get {
+                return this.MaNhanVienField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaNhanVienField, value) != true)) {
+                    this.MaNhanVienField = value;
+                    this.RaisePropertyChanged("MaNhanVien");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime NgayHetHan {
+            get {
+                return this.NgayHetHanField;
+            }
+            set {
+                if ((this.NgayHetHanField.Equals(value) != true)) {
+                    this.NgayHetHanField = value;
+                    this.RaisePropertyChanged("NgayHetHan");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime NgayTao {
+            get {
+                return this.NgayTaoField;
+            }
+            set {
+                if ((this.NgayTaoField.Equals(value) != true)) {
+                    this.NgayTaoField = value;
+                    this.RaisePropertyChanged("NgayTao");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal TongTien {
+            get {
+                return this.TongTienField;
+            }
+            set {
+                if ((this.TongTienField.Equals(value) != true)) {
+                    this.TongTienField = value;
+                    this.RaisePropertyChanged("TongTien");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BaoGiaCT", Namespace="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO")]
+    [System.SerializableAttribute()]
+    public partial class BaoGiaCT : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal DonGiaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaBaoGiaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaSanPhamField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SoLuongField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal DonGia {
+            get {
+                return this.DonGiaField;
+            }
+            set {
+                if ((this.DonGiaField.Equals(value) != true)) {
+                    this.DonGiaField = value;
+                    this.RaisePropertyChanged("DonGia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaBaoGia {
+            get {
+                return this.MaBaoGiaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaBaoGiaField, value) != true)) {
+                    this.MaBaoGiaField = value;
+                    this.RaisePropertyChanged("MaBaoGia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaSanPham {
+            get {
+                return this.MaSanPhamField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaSanPhamField, value) != true)) {
+                    this.MaSanPhamField = value;
+                    this.RaisePropertyChanged("MaSanPham");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SoLuong {
+            get {
+                return this.SoLuongField;
+            }
+            set {
+                if ((this.SoLuongField.Equals(value) != true)) {
+                    this.SoLuongField = value;
+                    this.RaisePropertyChanged("SoLuong");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="BanHangService.INhanVien")]
     public interface INhanVien {
@@ -2236,6 +2470,87 @@ namespace QuanLyBanHang.BanHangService {
         
         public bool NhomSanPham_Delete(int mansp) {
             return base.Channel.NhomSanPham_Delete(mansp);
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="BanHangService.IBaoGia")]
+    public interface IBaoGia {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaoGia/BaoGia_GetBaoGia", ReplyAction="http://tempuri.org/IBaoGia/BaoGia_GetBaoGiaResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IBaoGia/BaoGia_GetBaoGiaExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        System.Data.DataSet BaoGia_GetBaoGia(QuanLyBanHang.BanHangService.BaoGia inp, string swhere);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaoGia/BaoGia_LoadChiTiet", ReplyAction="http://tempuri.org/IBaoGia/BaoGia_LoadChiTietResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IBaoGia/BaoGia_LoadChiTietExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        QuanLyBanHang.BanHangService.BaoGiaCT[] BaoGia_LoadChiTiet(string mabg);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaoGia/BaoGia_Insert", ReplyAction="http://tempuri.org/IBaoGia/BaoGia_InsertResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IBaoGia/BaoGia_InsertExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        bool BaoGia_Insert(QuanLyBanHang.BanHangService.BaoGia inp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaoGia/BaoGia_Update", ReplyAction="http://tempuri.org/IBaoGia/BaoGia_UpdateResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IBaoGia/BaoGia_UpdateExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        bool BaoGia_Update(QuanLyBanHang.BanHangService.BaoGia inp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaoGia/BaoGia_Delete", ReplyAction="http://tempuri.org/IBaoGia/BaoGia_DeleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IBaoGia/BaoGia_DeleteExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        bool BaoGia_Delete(string mabg);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaoGia/BaoGia_GetNewID", ReplyAction="http://tempuri.org/IBaoGia/BaoGia_GetNewIDResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IBaoGia/BaoGia_GetNewIDExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        string BaoGia_GetNewID(int year, int month);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IBaoGiaChannel : QuanLyBanHang.BanHangService.IBaoGia, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class BaoGiaClient : System.ServiceModel.ClientBase<QuanLyBanHang.BanHangService.IBaoGia>, QuanLyBanHang.BanHangService.IBaoGia {
+        
+        public BaoGiaClient() {
+        }
+        
+        public BaoGiaClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public BaoGiaClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public BaoGiaClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public BaoGiaClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public System.Data.DataSet BaoGia_GetBaoGia(QuanLyBanHang.BanHangService.BaoGia inp, string swhere) {
+            return base.Channel.BaoGia_GetBaoGia(inp, swhere);
+        }
+        
+        public QuanLyBanHang.BanHangService.BaoGiaCT[] BaoGia_LoadChiTiet(string mabg) {
+            return base.Channel.BaoGia_LoadChiTiet(mabg);
+        }
+        
+        public bool BaoGia_Insert(QuanLyBanHang.BanHangService.BaoGia inp) {
+            return base.Channel.BaoGia_Insert(inp);
+        }
+        
+        public bool BaoGia_Update(QuanLyBanHang.BanHangService.BaoGia inp) {
+            return base.Channel.BaoGia_Update(inp);
+        }
+        
+        public bool BaoGia_Delete(string mabg) {
+            return base.Channel.BaoGia_Delete(mabg);
+        }
+        
+        public string BaoGia_GetNewID(int year, int month) {
+            return base.Channel.BaoGia_GetNewID(year, month);
         }
     }
 }

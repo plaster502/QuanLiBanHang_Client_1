@@ -564,4 +564,102 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="BaoGia_GetBaoGia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q28:BaoGia" />
+        <xs:element minOccurs="0" name="swhere" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BaoGia_GetBaoGiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BaoGia_GetBaoGiaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BaoGia_LoadChiTiet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mabg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BaoGia_LoadChiTietResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="BaoGia_LoadChiTietResult" nillable="true" type="q29:ArrayOfBaoGiaCT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BaoGia_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q30:BaoGia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BaoGia_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BaoGia_InsertResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BaoGia_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q31:BaoGia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BaoGia_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BaoGia_UpdateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BaoGia_Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mabg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BaoGia_DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BaoGia_DeleteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BaoGia_GetNewID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="year" type="xs:int" />
+        <xs:element minOccurs="0" name="month" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BaoGia_GetNewIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BaoGia_GetNewIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

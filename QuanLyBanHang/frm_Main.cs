@@ -101,8 +101,8 @@ namespace QuanLyBanHang
         //4.1. Báo giá
         private void ni_BaoGia_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //QuanLyBanSach.MenuNhanVien.uc_StaffList uc = new MenuNhanVien.uc_StaffList();
-            //LoadTab("Danh sách nhân viên", uc);
+            QuanLyBanHang.MenuBanHang.uc_QuoteList uc = new QuanLyBanHang.MenuBanHang.uc_QuoteList();
+            LoadTab("Danh sách báo giá", uc);
         }
         //4.2. Đơn hàng
         private void ni_PhieuDatHang_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
