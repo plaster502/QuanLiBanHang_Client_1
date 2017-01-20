@@ -366,6 +366,33 @@
   <wsdl:message name="IBaoGia_BaoGia_GetNewID_ExceptionFault_FaultMessage">
     <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/System" name="detail" element="q39:Exception" />
   </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_GetDonHang_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonDatHang_GetDonHang" />
+  </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_GetDonHang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonDatHang_GetDonHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_GetDonHang_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/System" name="detail" element="q40:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_LoadChiTiet_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonDatHang_LoadChiTiet" />
+  </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_LoadChiTiet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonDatHang_LoadChiTietResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_LoadChiTiet_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/System" name="detail" element="q41:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonDatHang_Delete" />
+  </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonDatHang_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_Delete_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/System" name="detail" element="q42:Exception" />
+  </wsdl:message>
   <wsdl:portType name="INhanVien">
     <wsdl:operation name="NhanVien_CheckLogIn">
       <wsdl:input wsaw:Action="http://tempuri.org/INhanVien/NhanVien_CheckLogIn" message="tns:INhanVien_NhanVien_CheckLogIn_InputMessage" />
@@ -585,6 +612,23 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_GetNewID" message="tns:IBaoGia_BaoGia_GetNewID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_GetNewIDResponse" message="tns:IBaoGia_BaoGia_GetNewID_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/IBaoGia/BaoGia_GetNewIDExceptionFault" name="ExceptionFault" message="tns:IBaoGia_BaoGia_GetNewID_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IDonDatHang">
+    <wsdl:operation name="DonDatHang_GetDonHang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_GetDonHang" message="tns:IDonDatHang_DonDatHang_GetDonHang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_GetDonHangResponse" message="tns:IDonDatHang_DonDatHang_GetDonHang_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_GetDonHangExceptionFault" name="ExceptionFault" message="tns:IDonDatHang_DonDatHang_GetDonHang_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DonDatHang_LoadChiTiet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_LoadChiTiet" message="tns:IDonDatHang_DonDatHang_LoadChiTiet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_LoadChiTietResponse" message="tns:IDonDatHang_DonDatHang_LoadChiTiet_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_LoadChiTietExceptionFault" name="ExceptionFault" message="tns:IDonDatHang_DonDatHang_LoadChiTiet_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DonDatHang_Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_Delete" message="tns:IDonDatHang_DonDatHang_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_DeleteResponse" message="tns:IDonDatHang_DonDatHang_Delete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_DeleteExceptionFault" name="ExceptionFault" message="tns:IDonDatHang_DonDatHang_Delete_ExceptionFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_INhanVien" type="tns:INhanVien">
@@ -1097,6 +1141,45 @@
       </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IDonDatHang" type="tns:IDonDatHang">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DonDatHang_GetDonHang">
+      <soap:operation soapAction="http://tempuri.org/IDonDatHang/DonDatHang_GetDonHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DonDatHang_LoadChiTiet">
+      <soap:operation soapAction="http://tempuri.org/IDonDatHang/DonDatHang_LoadChiTiet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DonDatHang_Delete">
+      <soap:operation soapAction="http://tempuri.org/IDonDatHang/DonDatHang_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
   <wsdl:service name="BanHangService">
     <wsdl:port name="BasicHttpBinding_INhanVien" binding="tns:BasicHttpBinding_INhanVien">
       <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/NhanVien" />
@@ -1130,6 +1213,9 @@
     </wsdl:port>
     <wsdl:port name="BasicHttpBinding_IBaoGia" binding="tns:BasicHttpBinding_IBaoGia">
       <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/BaoGia" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IDonDatHang" binding="tns:BasicHttpBinding_IDonDatHang">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/DonDatHang" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

@@ -206,4 +206,30 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="BaoGiaCT" nillable="true" type="tns:BaoGiaCT" />
+  <xs:complexType name="DonDatHang">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DSChiTiet" nillable="true" type="tns:ArrayOfDonDatHangCT" />
+      <xs:element minOccurs="0" name="MaDonHang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaKhachHang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaNhanVien" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NgayTao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TongTien" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DonDatHang" nillable="true" type="tns:DonDatHang" />
+  <xs:complexType name="ArrayOfDonDatHangCT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DonDatHangCT" nillable="true" type="tns:DonDatHangCT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDonDatHangCT" nillable="true" type="tns:ArrayOfDonDatHangCT" />
+  <xs:complexType name="DonDatHangCT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DonGia" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MaDonDatHang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaSanPham" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SoLuong" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DonDatHangCT" nillable="true" type="tns:DonDatHangCT" />
 </xs:schema>

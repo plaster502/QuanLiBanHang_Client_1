@@ -229,7 +229,7 @@ namespace QuanLyBanHang.MenuBanHang
             }
         }
 
-        //Tìm kiếm phiếu nhập
+        //Tìm kiếm báo giá
         private void txt_ThongTinTimKiem_TextChanged(object sender, EventArgs e)
         {
             try

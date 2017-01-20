@@ -98,8 +98,10 @@
             this.lb_PhieuNhap1 = new System.Windows.Forms.Label();
             this.tabCtrl_Main = new System.Windows.Forms.TabControl();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
-            this.ng_NhanVien = new DevExpress.XtraNavBar.NavBarGroup();
-            this.ni_DanhSachNhanVien = new DevExpress.XtraNavBar.NavBarItem();
+            this.ng_BanHang = new DevExpress.XtraNavBar.NavBarGroup();
+            this.ni_BaoGia = new DevExpress.XtraNavBar.NavBarItem();
+            this.ni_PhieuDatHang = new DevExpress.XtraNavBar.NavBarItem();
+            this.ni_HoaDon = new DevExpress.XtraNavBar.NavBarItem();
             this.ng_HeThong = new DevExpress.XtraNavBar.NavBarGroup();
             this.ni_ThongTinDonVi = new DevExpress.XtraNavBar.NavBarItem();
             this.ni_ThongTinTaiKhoan = new DevExpress.XtraNavBar.NavBarItem();
@@ -110,10 +112,8 @@
             this.ni_SanPham = new DevExpress.XtraNavBar.NavBarItem();
             this.ni_NhomSanPham = new DevExpress.XtraNavBar.NavBarItem();
             this.ni_DonViTinh = new DevExpress.XtraNavBar.NavBarItem();
-            this.ng_BanHang = new DevExpress.XtraNavBar.NavBarGroup();
-            this.ni_BaoGia = new DevExpress.XtraNavBar.NavBarItem();
-            this.ni_PhieuDatHang = new DevExpress.XtraNavBar.NavBarItem();
-            this.ni_HoaDon = new DevExpress.XtraNavBar.NavBarItem();
+            this.ng_NhanVien = new DevExpress.XtraNavBar.NavBarGroup();
+            this.ni_DanhSachNhanVien = new DevExpress.XtraNavBar.NavBarItem();
             this.ng_XuatNhapKho = new DevExpress.XtraNavBar.NavBarGroup();
             this.ni_PhieuNhap = new DevExpress.XtraNavBar.NavBarItem();
             this.ni_PhieuXuat = new DevExpress.XtraNavBar.NavBarItem();
@@ -917,21 +917,36 @@
             this.navBarControl1.Text = "navBarControl1";
             this.navBarControl1.View = new DevExpress.XtraNavBar.ViewInfo.StandardSkinNavigationPaneViewInfoRegistrator("Visual Studio 2013 Dark");
             // 
-            // ng_NhanVien
+            // ng_BanHang
             // 
-            this.ng_NhanVien.Caption = "3. Nhân viên";
-            this.ng_NhanVien.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
-            this.ng_NhanVien.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_DanhSachNhanVien)});
-            this.ng_NhanVien.Name = "ng_NhanVien";
-            this.ng_NhanVien.SmallImage = ((System.Drawing.Image)(resources.GetObject("ng_NhanVien.SmallImage")));
+            this.ng_BanHang.Caption = "4. Bán hàng";
+            this.ng_BanHang.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_BaoGia),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_PhieuDatHang),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_HoaDon)});
+            this.ng_BanHang.Name = "ng_BanHang";
+            this.ng_BanHang.SmallImage = ((System.Drawing.Image)(resources.GetObject("ng_BanHang.SmallImage")));
             // 
-            // ni_DanhSachNhanVien
+            // ni_BaoGia
             // 
-            this.ni_DanhSachNhanVien.Caption = "3.1. DS nhân viên";
-            this.ni_DanhSachNhanVien.Name = "ni_DanhSachNhanVien";
-            this.ni_DanhSachNhanVien.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_DanhSachNhanVien.SmallImage")));
-            this.ni_DanhSachNhanVien.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_DanhSachNhanVien_LinkClicked);
+            this.ni_BaoGia.Caption = "4.1. Báo giá";
+            this.ni_BaoGia.Name = "ni_BaoGia";
+            this.ni_BaoGia.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_BaoGia.SmallImage")));
+            this.ni_BaoGia.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_BaoGia_LinkClicked);
+            // 
+            // ni_PhieuDatHang
+            // 
+            this.ni_PhieuDatHang.Caption = "4.2. Đơn đặt hàng";
+            this.ni_PhieuDatHang.Name = "ni_PhieuDatHang";
+            this.ni_PhieuDatHang.SmallImage = global::QuanLyBanHang.Properties.Resources.basket_add;
+            this.ni_PhieuDatHang.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_PhieuDatHang_LinkClicked);
+            // 
+            // ni_HoaDon
+            // 
+            this.ni_HoaDon.Caption = "4.3. Hoá đơn";
+            this.ni_HoaDon.Name = "ni_HoaDon";
+            this.ni_HoaDon.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_HoaDon.SmallImage")));
+            this.ni_HoaDon.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_HoaDon_LinkClicked);
             // 
             // ng_HeThong
             // 
@@ -1013,36 +1028,21 @@
             this.ni_DonViTinh.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_DonViTinh.SmallImage")));
             this.ni_DonViTinh.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_DonViTinh_LinkClicked);
             // 
-            // ng_BanHang
+            // ng_NhanVien
             // 
-            this.ng_BanHang.Caption = "4. Bán hàng";
-            this.ng_BanHang.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_BaoGia),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_PhieuDatHang),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_HoaDon)});
-            this.ng_BanHang.Name = "ng_BanHang";
-            this.ng_BanHang.SmallImage = ((System.Drawing.Image)(resources.GetObject("ng_BanHang.SmallImage")));
+            this.ng_NhanVien.Caption = "3. Nhân viên";
+            this.ng_NhanVien.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
+            this.ng_NhanVien.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_DanhSachNhanVien)});
+            this.ng_NhanVien.Name = "ng_NhanVien";
+            this.ng_NhanVien.SmallImage = ((System.Drawing.Image)(resources.GetObject("ng_NhanVien.SmallImage")));
             // 
-            // ni_BaoGia
+            // ni_DanhSachNhanVien
             // 
-            this.ni_BaoGia.Caption = "4.1. Báo giá";
-            this.ni_BaoGia.Name = "ni_BaoGia";
-            this.ni_BaoGia.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_BaoGia.SmallImage")));
-            this.ni_BaoGia.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_BaoGia_LinkClicked);
-            // 
-            // ni_PhieuDatHang
-            // 
-            this.ni_PhieuDatHang.Caption = "4.2. Đơn đặt hàng";
-            this.ni_PhieuDatHang.Name = "ni_PhieuDatHang";
-            this.ni_PhieuDatHang.SmallImage = global::QuanLyBanHang.Properties.Resources.basket_add;
-            this.ni_PhieuDatHang.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_PhieuDatHang_LinkClicked);
-            // 
-            // ni_HoaDon
-            // 
-            this.ni_HoaDon.Caption = "4.3. Hoá đơn";
-            this.ni_HoaDon.Name = "ni_HoaDon";
-            this.ni_HoaDon.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_HoaDon.SmallImage")));
-            this.ni_HoaDon.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_HoaDon_LinkClicked);
+            this.ni_DanhSachNhanVien.Caption = "3.1. DS nhân viên";
+            this.ni_DanhSachNhanVien.Name = "ni_DanhSachNhanVien";
+            this.ni_DanhSachNhanVien.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_DanhSachNhanVien.SmallImage")));
+            this.ni_DanhSachNhanVien.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_DanhSachNhanVien_LinkClicked);
             // 
             // ng_XuatNhapKho
             // 

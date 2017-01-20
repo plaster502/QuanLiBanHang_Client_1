@@ -94,6 +94,18 @@
     <Compile Include="frm_Main.Designer.cs">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuBanHang\uc_OrderCreate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBanHang\uc_OrderCreate.Designer.cs">
+      <DependentUpon>uc_OrderCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBanHang\uc_OrderList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBanHang\uc_OrderList.Designer.cs">
+      <DependentUpon>uc_OrderList.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuBanHang\uc_QuoteCreate.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -179,6 +191,9 @@
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuBanHang\uc_OrderList.resx">
+      <DependentUpon>uc_OrderList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuBanHang\uc_QuoteCreate.resx">
       <DependentUpon>uc_QuoteCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +252,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.BaoGiaCT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.DonDatHangCT.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.DonVi.datasource">
