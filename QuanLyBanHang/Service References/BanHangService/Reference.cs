@@ -1872,6 +1872,224 @@ namespace QuanLyBanHang.BanHangService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DonDatHang", Namespace="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO")]
+    [System.SerializableAttribute()]
+    public partial class DonDatHang : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private QuanLyBanHang.BanHangService.DonDatHangCT[] DSChiTietField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaDonHangField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaKhachHangField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaNhanVienField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime NgayTaoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal TongTienField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public QuanLyBanHang.BanHangService.DonDatHangCT[] DSChiTiet {
+            get {
+                return this.DSChiTietField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DSChiTietField, value) != true)) {
+                    this.DSChiTietField = value;
+                    this.RaisePropertyChanged("DSChiTiet");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaDonHang {
+            get {
+                return this.MaDonHangField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaDonHangField, value) != true)) {
+                    this.MaDonHangField = value;
+                    this.RaisePropertyChanged("MaDonHang");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaKhachHang {
+            get {
+                return this.MaKhachHangField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaKhachHangField, value) != true)) {
+                    this.MaKhachHangField = value;
+                    this.RaisePropertyChanged("MaKhachHang");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaNhanVien {
+            get {
+                return this.MaNhanVienField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaNhanVienField, value) != true)) {
+                    this.MaNhanVienField = value;
+                    this.RaisePropertyChanged("MaNhanVien");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime NgayTao {
+            get {
+                return this.NgayTaoField;
+            }
+            set {
+                if ((this.NgayTaoField.Equals(value) != true)) {
+                    this.NgayTaoField = value;
+                    this.RaisePropertyChanged("NgayTao");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal TongTien {
+            get {
+                return this.TongTienField;
+            }
+            set {
+                if ((this.TongTienField.Equals(value) != true)) {
+                    this.TongTienField = value;
+                    this.RaisePropertyChanged("TongTien");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DonDatHangCT", Namespace="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO")]
+    [System.SerializableAttribute()]
+    public partial class DonDatHangCT : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal DonGiaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaDonDatHangField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaSanPhamField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SoLuongField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal DonGia {
+            get {
+                return this.DonGiaField;
+            }
+            set {
+                if ((this.DonGiaField.Equals(value) != true)) {
+                    this.DonGiaField = value;
+                    this.RaisePropertyChanged("DonGia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaDonDatHang {
+            get {
+                return this.MaDonDatHangField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaDonDatHangField, value) != true)) {
+                    this.MaDonDatHangField = value;
+                    this.RaisePropertyChanged("MaDonDatHang");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaSanPham {
+            get {
+                return this.MaSanPhamField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaSanPhamField, value) != true)) {
+                    this.MaSanPhamField = value;
+                    this.RaisePropertyChanged("MaSanPham");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SoLuong {
+            get {
+                return this.SoLuongField;
+            }
+            set {
+                if ((this.SoLuongField.Equals(value) != true)) {
+                    this.SoLuongField = value;
+                    this.RaisePropertyChanged("SoLuong");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="BanHangService.INhanVien")]
     public interface INhanVien {
@@ -2551,6 +2769,63 @@ namespace QuanLyBanHang.BanHangService {
         
         public string BaoGia_GetNewID(int year, int month) {
             return base.Channel.BaoGia_GetNewID(year, month);
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="BanHangService.IDonDatHang")]
+    public interface IDonDatHang {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDonDatHang/DonDatHang_GetDonHang", ReplyAction="http://tempuri.org/IDonDatHang/DonDatHang_GetDonHangResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IDonDatHang/DonDatHang_GetDonHangExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        System.Data.DataSet DonDatHang_GetDonHang(QuanLyBanHang.BanHangService.DonDatHang inp, string swhere);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDonDatHang/DonDatHang_LoadChiTiet", ReplyAction="http://tempuri.org/IDonDatHang/DonDatHang_LoadChiTietResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IDonDatHang/DonDatHang_LoadChiTietExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        QuanLyBanHang.BanHangService.DonDatHangCT[] DonDatHang_LoadChiTiet(string madh);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDonDatHang/DonDatHang_Delete", ReplyAction="http://tempuri.org/IDonDatHang/DonDatHang_DeleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IDonDatHang/DonDatHang_DeleteExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        bool DonDatHang_Delete(string madh);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IDonDatHangChannel : QuanLyBanHang.BanHangService.IDonDatHang, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class DonDatHangClient : System.ServiceModel.ClientBase<QuanLyBanHang.BanHangService.IDonDatHang>, QuanLyBanHang.BanHangService.IDonDatHang {
+        
+        public DonDatHangClient() {
+        }
+        
+        public DonDatHangClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public DonDatHangClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public DonDatHangClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public DonDatHangClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public System.Data.DataSet DonDatHang_GetDonHang(QuanLyBanHang.BanHangService.DonDatHang inp, string swhere) {
+            return base.Channel.DonDatHang_GetDonHang(inp, swhere);
+        }
+        
+        public QuanLyBanHang.BanHangService.DonDatHangCT[] DonDatHang_LoadChiTiet(string madh) {
+            return base.Channel.DonDatHang_LoadChiTiet(madh);
+        }
+        
+        public bool DonDatHang_Delete(string madh) {
+            return base.Channel.DonDatHang_Delete(madh);
         }
     }
 }

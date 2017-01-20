@@ -662,4 +662,59 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="DonDatHang_GetDonHang">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q32:DonDatHang" />
+        <xs:element minOccurs="0" name="swhere" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DonDatHang_GetDonHangResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DonDatHang_GetDonHangResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DonDatHang_LoadChiTiet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="madh" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DonDatHang_LoadChiTietResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="DonDatHang_LoadChiTietResult" nillable="true" type="q33:ArrayOfDonDatHangCT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DonDatHang_Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="madh" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DonDatHang_DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DonDatHang_DeleteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
