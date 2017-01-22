@@ -2784,9 +2784,21 @@ namespace QuanLyBanHang.BanHangService {
         [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IDonDatHang/DonDatHang_LoadChiTietExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
         QuanLyBanHang.BanHangService.DonDatHangCT[] DonDatHang_LoadChiTiet(string madh);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDonDatHang/DonDatHang_Insert", ReplyAction="http://tempuri.org/IDonDatHang/DonDatHang_InsertResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IDonDatHang/DonDatHang_InsertExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        bool DonDatHang_Insert(QuanLyBanHang.BanHangService.DonDatHang inp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDonDatHang/DonDatHang_Update", ReplyAction="http://tempuri.org/IDonDatHang/DonDatHang_UpdateResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IDonDatHang/DonDatHang_UpdateExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        bool DonDatHang_Update(QuanLyBanHang.BanHangService.DonDatHang inp);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDonDatHang/DonDatHang_Delete", ReplyAction="http://tempuri.org/IDonDatHang/DonDatHang_DeleteResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IDonDatHang/DonDatHang_DeleteExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
         bool DonDatHang_Delete(string madh);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDonDatHang/DonDatHang_GetNewID", ReplyAction="http://tempuri.org/IDonDatHang/DonDatHang_GetNewIDResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IDonDatHang/DonDatHang_GetNewIDExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        string DonDatHang_GetNewID(int year, int month);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2824,8 +2836,20 @@ namespace QuanLyBanHang.BanHangService {
             return base.Channel.DonDatHang_LoadChiTiet(madh);
         }
         
+        public bool DonDatHang_Insert(QuanLyBanHang.BanHangService.DonDatHang inp) {
+            return base.Channel.DonDatHang_Insert(inp);
+        }
+        
+        public bool DonDatHang_Update(QuanLyBanHang.BanHangService.DonDatHang inp) {
+            return base.Channel.DonDatHang_Update(inp);
+        }
+        
         public bool DonDatHang_Delete(string madh) {
             return base.Channel.DonDatHang_Delete(madh);
+        }
+        
+        public string DonDatHang_GetNewID(int year, int month) {
+            return base.Channel.DonDatHang_GetNewID(year, month);
         }
     }
 }

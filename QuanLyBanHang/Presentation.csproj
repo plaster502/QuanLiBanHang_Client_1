@@ -191,6 +191,9 @@
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuBanHang\uc_OrderCreate.resx">
+      <DependentUpon>uc_OrderCreate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuBanHang\uc_OrderList.resx">
       <DependentUpon>uc_OrderList.cs</DependentUpon>
     </EmbeddedResource>
