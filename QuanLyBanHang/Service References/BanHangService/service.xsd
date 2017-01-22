@@ -703,6 +703,34 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="DonDatHang_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q34:DonDatHang" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DonDatHang_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DonDatHang_InsertResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DonDatHang_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q35:DonDatHang" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DonDatHang_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DonDatHang_UpdateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="DonDatHang_Delete">
     <xs:complexType>
       <xs:sequence>
@@ -714,6 +742,21 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="DonDatHang_DeleteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DonDatHang_GetNewID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="year" type="xs:int" />
+        <xs:element minOccurs="0" name="month" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DonDatHang_GetNewIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DonDatHang_GetNewIDResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

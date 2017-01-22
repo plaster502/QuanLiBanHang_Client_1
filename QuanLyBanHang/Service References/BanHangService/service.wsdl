@@ -384,6 +384,24 @@
   <wsdl:message name="IDonDatHang_DonDatHang_LoadChiTiet_ExceptionFault_FaultMessage">
     <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/System" name="detail" element="q41:Exception" />
   </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonDatHang_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonDatHang_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_Insert_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/System" name="detail" element="q42:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonDatHang_Update" />
+  </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonDatHang_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_Update_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/System" name="detail" element="q43:Exception" />
+  </wsdl:message>
   <wsdl:message name="IDonDatHang_DonDatHang_Delete_InputMessage">
     <wsdl:part name="parameters" element="tns:DonDatHang_Delete" />
   </wsdl:message>
@@ -391,7 +409,16 @@
     <wsdl:part name="parameters" element="tns:DonDatHang_DeleteResponse" />
   </wsdl:message>
   <wsdl:message name="IDonDatHang_DonDatHang_Delete_ExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/System" name="detail" element="q42:Exception" />
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/System" name="detail" element="q44:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_GetNewID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonDatHang_GetNewID" />
+  </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_GetNewID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonDatHang_GetNewIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDonDatHang_DonDatHang_GetNewID_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/System" name="detail" element="q45:Exception" />
   </wsdl:message>
   <wsdl:portType name="INhanVien">
     <wsdl:operation name="NhanVien_CheckLogIn">
@@ -625,10 +652,25 @@
       <wsdl:output wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_LoadChiTietResponse" message="tns:IDonDatHang_DonDatHang_LoadChiTiet_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_LoadChiTietExceptionFault" name="ExceptionFault" message="tns:IDonDatHang_DonDatHang_LoadChiTiet_ExceptionFault_FaultMessage" />
     </wsdl:operation>
+    <wsdl:operation name="DonDatHang_Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_Insert" message="tns:IDonDatHang_DonDatHang_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_InsertResponse" message="tns:IDonDatHang_DonDatHang_Insert_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_InsertExceptionFault" name="ExceptionFault" message="tns:IDonDatHang_DonDatHang_Insert_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DonDatHang_Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_Update" message="tns:IDonDatHang_DonDatHang_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_UpdateResponse" message="tns:IDonDatHang_DonDatHang_Update_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_UpdateExceptionFault" name="ExceptionFault" message="tns:IDonDatHang_DonDatHang_Update_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
     <wsdl:operation name="DonDatHang_Delete">
       <wsdl:input wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_Delete" message="tns:IDonDatHang_DonDatHang_Delete_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_DeleteResponse" message="tns:IDonDatHang_DonDatHang_Delete_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_DeleteExceptionFault" name="ExceptionFault" message="tns:IDonDatHang_DonDatHang_Delete_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DonDatHang_GetNewID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_GetNewID" message="tns:IDonDatHang_DonDatHang_GetNewID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_GetNewIDResponse" message="tns:IDonDatHang_DonDatHang_GetNewID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_GetNewIDExceptionFault" name="ExceptionFault" message="tns:IDonDatHang_DonDatHang_GetNewID_ExceptionFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_INhanVien" type="tns:INhanVien">
@@ -1167,8 +1209,44 @@
         <soap:fault use="literal" name="ExceptionFault" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
+    <wsdl:operation name="DonDatHang_Insert">
+      <soap:operation soapAction="http://tempuri.org/IDonDatHang/DonDatHang_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DonDatHang_Update">
+      <soap:operation soapAction="http://tempuri.org/IDonDatHang/DonDatHang_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
     <wsdl:operation name="DonDatHang_Delete">
       <soap:operation soapAction="http://tempuri.org/IDonDatHang/DonDatHang_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DonDatHang_GetNewID">
+      <soap:operation soapAction="http://tempuri.org/IDonDatHang/DonDatHang_GetNewID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
