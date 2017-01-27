@@ -15,15 +15,17 @@ namespace QuanLyBanHang
     public partial class frm_Main : Form
     {
         string userid = "";
+        List<NhanNgonNgu> language = new List<NhanNgonNgu>();
 
         #region Contructor
         public frm_Main()
         {
             InitializeComponent();
         }
-        public frm_Main(string _User)
+        public frm_Main(string _User,List<NhanNgonNgu> labellist)
         {
             userid = _User;
+            language = labellist;
             InitializeComponent();
         }
         #endregion
@@ -32,6 +34,7 @@ namespace QuanLyBanHang
         private void frm_Main_Load(object sender, EventArgs e)
         {
             LoadTotalReport();
+            LoadLanguage();
         }
 
         #region 1.Hệ Thống
@@ -428,5 +431,100 @@ namespace QuanLyBanHang
             }
         }
 
+        //Load form theo ngôn ngữ
+        private void LoadLanguage()
+        {
+            NhanNgonNguClient clientnn = new NhanNgonNguClient();
+
+            this.Text = language[2].Chu;
+
+            #region report area
+            grb_PhieuNhap.Text = language[3].Chu;
+            lb_PhieuNhap1.Text = language[4].Chu;
+            lb_PhieuNhap1_SoPhieu.Text = "- "+ language[5].Chu + ":";
+            lb_PhieuNhap1_Tien.Text = "- " + language[6].Chu + ":";
+            lb_PhieuNhap2.Text = language[7].Chu + ":"; 
+            lb_PhieuNhap2_SoPhieu.Text = "- " + language[5].Chu + ":";
+            lb_PhieuNhap2_Tien.Text = "- " + language[6].Chu + ":";
+
+            grb_PhieuXuat.Text = language[8].Chu;
+            lb_PhieuXuat1.Text = language[4].Chu + ":";
+            lb_PhieuXuat1_SoPhieu.Text = "- " + language[5].Chu + ":";
+            lb_PhieuXuat1_Tien.Text = "- " + language[6].Chu + ":";
+            lb_PhieuXuat2.Text = language[7].Chu + ":";
+            lb_PhieuXuat2_SoPhieu.Text = "- " + language[5].Chu + ":";
+            lb_PhieuXuat2_Tien.Text = "- " + language[6].Chu + ":";
+
+            grb_HoaDon.Text = language[9].Chu;
+            lb_HoaDon1.Text = language[4].Chu + ":";
+            lb_HoaDon1_SoHD.Text = "- " + language[10].Chu + ":";
+            lb_HoaDon1_DoanhThu.Text = "- " + language[11].Chu + ":";
+            lb_HoaDon2.Text = language[7].Chu + ":";
+            lb_HoaDon2_SoHD.Text = "- " + language[10].Chu + ":";
+            lb_HoaDon2_DoanhThu.Text = "- " + language[11].Chu + ":";
+
+            grb_StaffCustomer.Text = language[13].Chu + " - " + language[12].Chu;
+            lb_KhachHang.Text = language[13].Chu;
+            lb_KhachHang_ConNo.Text = "- " + language[14].Chu + ":";
+            lb_KhachHang_Tong.Text = "- " + language[15].Chu + ":";
+            lb_NhanVien.Text = language[12].Chu;
+            lb_NhanVien_Nam.Text = "- " + language[16].Chu + ":";
+            lb_NhanVien_Nu.Text = "- " + language[17].Chu + ":";
+
+            grb_CongNo.Text = language[18].Chu;
+            lb_CongNo1.Text = language[4].Chu + ":";
+            lb_CongNo2.Text = language[7].Chu + ":";
+            lb_SoNo.Text = "- " + language[19].Chu + ":";
+            lb_SoNo_Thang.Text = "- " + language[19].Chu + ":";
+            lb_TienThu.Text = "- " + language[20].Chu + ":";
+            lb_TienThu_Thang.Text = "- " + language[20].Chu + ":";
+
+            grb_SanPham.Text = language[21].Chu;
+            lb_MaSanPham.Text = language[22].Chu;
+            lb_TongTon.Text = language[23].Chu;
+            lb_ConHang.Text = "- " + language[24].Chu + ":";
+            lb_HetHang.Text = "- " + language[25].Chu + ":";
+            #endregion
+
+            tab_MenuMain.Text = language[26].Chu + "     ";
+
+            #region menu area
+            ng_HeThong.Caption = "1. " + language[27].Chu;
+            ni_ThongTinDonVi.Caption = "1.1. " + language[28].Chu;
+            ni_ThongTinTaiKhoan.Caption = "1.2. " + language[29].Chu;
+            ni_TroGiup.Caption = "1.3. " + language[30].Chu;
+            ni_DangXuat.Caption = "1.4. " + language[31].Chu;
+            ni_Thoat.Caption = "1.5 ." + language[1].Chu;
+
+            ng_DanhMuc.Caption = "2. " + language[32].Chu;
+            ni_SanPham.Caption = "2.1. " + language[21].Chu;
+            ni_NhomSanPham.Caption = "2.2. " + language[33].Chu;
+            ni_DonViTinh.Caption = "2.3. " + language[34].Chu;
+
+            ng_NhanVien.Caption = "3. " + language[12].Chu;
+            ni_DanhSachNhanVien.Caption = "3.1. " + language[35].Chu;
+
+            ng_BanHang.Caption = "4. " + language[36].Chu;
+            ni_BaoGia.Caption = "4.1. " + language[37].Chu;
+            ni_PhieuDatHang.Caption = "4.2. " + language[38].Chu;
+            ni_HoaDon.Caption = "4.3. " + language[9].Chu;
+
+            ng_XuatNhapKho.Caption = "5. " + language[39].Chu;
+            ni_PhieuNhap.Caption = "5.1. " + language[3].Chu;
+            ni_PhieuXuat.Caption = "5.2. " + language[8].Chu;
+
+            ng_CongNo.Caption = "6. " + language[18].Chu;
+            ni_KhachHang.Caption = "6.1. " + language[13].Chu;
+            ni_ThongTinCongNo.Caption = "6.2. " + language[40].Chu;
+            ni_DanhSachPhieuThu.Caption = "6.3. " + language[41].Chu;
+
+            ng_ThongKe.Caption = "7. " + language[42].Chu;
+            ni_BaoCaoCongNo.Caption = "7.1. " + language[43].Chu;
+            ni_BaoCaoTonKho.Caption = "7.2. " + language[44].Chu;
+            ni_KhoaSoThang.Caption = "7.3. " + language[45].Chu;
+            #endregion
+        }
+
     }
 }
+;

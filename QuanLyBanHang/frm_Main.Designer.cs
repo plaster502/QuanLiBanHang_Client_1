@@ -56,14 +56,14 @@
             this.lb_HoaDon1_DoanhThu_value = new System.Windows.Forms.Label();
             this.grb_CongNo = new System.Windows.Forms.GroupBox();
             this.lb_TienThu_Thang_value = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
+            this.lb_CongNo1 = new System.Windows.Forms.Label();
             this.lb_TienThu_Thang = new System.Windows.Forms.Label();
             this.lb_SoNo = new System.Windows.Forms.Label();
             this.lb_SoNo_Thang_value = new System.Windows.Forms.Label();
             this.lb_SoNo_value = new System.Windows.Forms.Label();
             this.lb_SoNo_Thang = new System.Windows.Forms.Label();
             this.lb_TienThu = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.lb_CongNo2 = new System.Windows.Forms.Label();
             this.lb_TienThu_value = new System.Windows.Forms.Label();
             this.grb_SanPham = new System.Windows.Forms.GroupBox();
             this.lb_TongTon_value = new System.Windows.Forms.Label();
@@ -98,10 +98,6 @@
             this.lb_PhieuNhap1 = new System.Windows.Forms.Label();
             this.tabCtrl_Main = new System.Windows.Forms.TabControl();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
-            this.ng_BanHang = new DevExpress.XtraNavBar.NavBarGroup();
-            this.ni_BaoGia = new DevExpress.XtraNavBar.NavBarItem();
-            this.ni_PhieuDatHang = new DevExpress.XtraNavBar.NavBarItem();
-            this.ni_HoaDon = new DevExpress.XtraNavBar.NavBarItem();
             this.ng_HeThong = new DevExpress.XtraNavBar.NavBarGroup();
             this.ni_ThongTinDonVi = new DevExpress.XtraNavBar.NavBarItem();
             this.ni_ThongTinTaiKhoan = new DevExpress.XtraNavBar.NavBarItem();
@@ -114,6 +110,10 @@
             this.ni_DonViTinh = new DevExpress.XtraNavBar.NavBarItem();
             this.ng_NhanVien = new DevExpress.XtraNavBar.NavBarGroup();
             this.ni_DanhSachNhanVien = new DevExpress.XtraNavBar.NavBarItem();
+            this.ng_BanHang = new DevExpress.XtraNavBar.NavBarGroup();
+            this.ni_BaoGia = new DevExpress.XtraNavBar.NavBarItem();
+            this.ni_PhieuDatHang = new DevExpress.XtraNavBar.NavBarItem();
+            this.ni_HoaDon = new DevExpress.XtraNavBar.NavBarItem();
             this.ng_XuatNhapKho = new DevExpress.XtraNavBar.NavBarGroup();
             this.ni_PhieuNhap = new DevExpress.XtraNavBar.NavBarItem();
             this.ni_PhieuXuat = new DevExpress.XtraNavBar.NavBarItem();
@@ -326,6 +326,7 @@
             this.lb_HoaDon2_DoanhThu_value.Size = new System.Drawing.Size(13, 13);
             this.lb_HoaDon2_DoanhThu_value.TabIndex = 19;
             this.lb_HoaDon2_DoanhThu_value.Text = "0";
+            this.lb_HoaDon2_DoanhThu_value.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lb_HoaDon1
             // 
@@ -340,7 +341,7 @@
             // lb_HoaDon2_DoanhThu
             // 
             this.lb_HoaDon2_DoanhThu.AutoSize = true;
-            this.lb_HoaDon2_DoanhThu.Location = new System.Drawing.Point(30, 101);
+            this.lb_HoaDon2_DoanhThu.Location = new System.Drawing.Point(13, 101);
             this.lb_HoaDon2_DoanhThu.Name = "lb_HoaDon2_DoanhThu";
             this.lb_HoaDon2_DoanhThu.Size = new System.Drawing.Size(69, 13);
             this.lb_HoaDon2_DoanhThu.TabIndex = 18;
@@ -349,7 +350,7 @@
             // lb_HoaDon1_SoHD
             // 
             this.lb_HoaDon1_SoHD.AutoSize = true;
-            this.lb_HoaDon1_SoHD.Location = new System.Drawing.Point(30, 34);
+            this.lb_HoaDon1_SoHD.Location = new System.Drawing.Point(13, 34);
             this.lb_HoaDon1_SoHD.Name = "lb_HoaDon1_SoHD";
             this.lb_HoaDon1_SoHD.Size = new System.Drawing.Size(75, 13);
             this.lb_HoaDon1_SoHD.TabIndex = 11;
@@ -364,6 +365,7 @@
             this.lb_HoaDon2_SoHD_value.Size = new System.Drawing.Size(13, 13);
             this.lb_HoaDon2_SoHD_value.TabIndex = 17;
             this.lb_HoaDon2_SoHD_value.Text = "0";
+            this.lb_HoaDon2_SoHD_value.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lb_HoaDon1_SoHD_value
             // 
@@ -374,11 +376,12 @@
             this.lb_HoaDon1_SoHD_value.Size = new System.Drawing.Size(13, 13);
             this.lb_HoaDon1_SoHD_value.TabIndex = 12;
             this.lb_HoaDon1_SoHD_value.Text = "0";
+            this.lb_HoaDon1_SoHD_value.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lb_HoaDon2_SoHD
             // 
             this.lb_HoaDon2_SoHD.AutoSize = true;
-            this.lb_HoaDon2_SoHD.Location = new System.Drawing.Point(30, 83);
+            this.lb_HoaDon2_SoHD.Location = new System.Drawing.Point(13, 83);
             this.lb_HoaDon2_SoHD.Name = "lb_HoaDon2_SoHD";
             this.lb_HoaDon2_SoHD.Size = new System.Drawing.Size(75, 13);
             this.lb_HoaDon2_SoHD.TabIndex = 16;
@@ -387,7 +390,7 @@
             // lb_HoaDon1_DoanhThu
             // 
             this.lb_HoaDon1_DoanhThu.AutoSize = true;
-            this.lb_HoaDon1_DoanhThu.Location = new System.Drawing.Point(30, 52);
+            this.lb_HoaDon1_DoanhThu.Location = new System.Drawing.Point(13, 52);
             this.lb_HoaDon1_DoanhThu.Name = "lb_HoaDon1_DoanhThu";
             this.lb_HoaDon1_DoanhThu.Size = new System.Drawing.Size(69, 13);
             this.lb_HoaDon1_DoanhThu.TabIndex = 13;
@@ -412,19 +415,20 @@
             this.lb_HoaDon1_DoanhThu_value.Size = new System.Drawing.Size(13, 13);
             this.lb_HoaDon1_DoanhThu_value.TabIndex = 14;
             this.lb_HoaDon1_DoanhThu_value.Text = "0";
+            this.lb_HoaDon1_DoanhThu_value.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // grb_CongNo
             // 
             this.grb_CongNo.AutoSize = true;
             this.grb_CongNo.Controls.Add(this.lb_TienThu_Thang_value);
-            this.grb_CongNo.Controls.Add(this.label30);
+            this.grb_CongNo.Controls.Add(this.lb_CongNo1);
             this.grb_CongNo.Controls.Add(this.lb_TienThu_Thang);
             this.grb_CongNo.Controls.Add(this.lb_SoNo);
             this.grb_CongNo.Controls.Add(this.lb_SoNo_Thang_value);
             this.grb_CongNo.Controls.Add(this.lb_SoNo_value);
             this.grb_CongNo.Controls.Add(this.lb_SoNo_Thang);
             this.grb_CongNo.Controls.Add(this.lb_TienThu);
-            this.grb_CongNo.Controls.Add(this.label25);
+            this.grb_CongNo.Controls.Add(this.lb_CongNo2);
             this.grb_CongNo.Controls.Add(this.lb_TienThu_value);
             this.grb_CongNo.Dock = System.Windows.Forms.DockStyle.Right;
             this.grb_CongNo.Location = new System.Drawing.Point(690, 0);
@@ -444,15 +448,15 @@
             this.lb_TienThu_Thang_value.TabIndex = 29;
             this.lb_TienThu_Thang_value.Text = "0";
             // 
-            // label30
+            // lb_CongNo1
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label30.Location = new System.Drawing.Point(6, 16);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(79, 13);
-            this.label30.TabIndex = 20;
-            this.label30.Text = "Trong ngày :";
+            this.lb_CongNo1.AutoSize = true;
+            this.lb_CongNo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lb_CongNo1.Location = new System.Drawing.Point(6, 16);
+            this.lb_CongNo1.Name = "lb_CongNo1";
+            this.lb_CongNo1.Size = new System.Drawing.Size(79, 13);
+            this.lb_CongNo1.TabIndex = 20;
+            this.lb_CongNo1.Text = "Trong ngày :";
             // 
             // lb_TienThu_Thang
             // 
@@ -510,15 +514,15 @@
             this.lb_TienThu.TabIndex = 23;
             this.lb_TienThu.Text = "- Thu khách hàng :";
             // 
-            // label25
+            // lb_CongNo2
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label25.Location = new System.Drawing.Point(6, 65);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(84, 13);
-            this.label25.TabIndex = 25;
-            this.label25.Text = "Trong tháng :";
+            this.lb_CongNo2.AutoSize = true;
+            this.lb_CongNo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lb_CongNo2.Location = new System.Drawing.Point(6, 65);
+            this.lb_CongNo2.Name = "lb_CongNo2";
+            this.lb_CongNo2.Size = new System.Drawing.Size(84, 13);
+            this.lb_CongNo2.TabIndex = 25;
+            this.lb_CongNo2.Text = "Trong tháng :";
             // 
             // lb_TienThu_value
             // 
@@ -657,6 +661,7 @@
             this.lb_PhieuXuat2_Tien_value.Size = new System.Drawing.Size(13, 13);
             this.lb_PhieuXuat2_Tien_value.TabIndex = 19;
             this.lb_PhieuXuat2_Tien_value.Text = "0";
+            this.lb_PhieuXuat2_Tien_value.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lb_PhieuXuat1
             // 
@@ -671,7 +676,7 @@
             // lb_PhieuXuat2_Tien
             // 
             this.lb_PhieuXuat2_Tien.AutoSize = true;
-            this.lb_PhieuXuat2_Tien.Location = new System.Drawing.Point(30, 101);
+            this.lb_PhieuXuat2_Tien.Location = new System.Drawing.Point(13, 101);
             this.lb_PhieuXuat2_Tien.Name = "lb_PhieuXuat2_Tien";
             this.lb_PhieuXuat2_Tien.Size = new System.Drawing.Size(63, 13);
             this.lb_PhieuXuat2_Tien.TabIndex = 18;
@@ -680,7 +685,7 @@
             // lb_PhieuXuat1_SoPhieu
             // 
             this.lb_PhieuXuat1_SoPhieu.AutoSize = true;
-            this.lb_PhieuXuat1_SoPhieu.Location = new System.Drawing.Point(30, 34);
+            this.lb_PhieuXuat1_SoPhieu.Location = new System.Drawing.Point(13, 34);
             this.lb_PhieuXuat1_SoPhieu.Name = "lb_PhieuXuat1_SoPhieu";
             this.lb_PhieuXuat1_SoPhieu.Size = new System.Drawing.Size(84, 13);
             this.lb_PhieuXuat1_SoPhieu.TabIndex = 11;
@@ -695,6 +700,7 @@
             this.lb_PhieuXuat2_SoPhieu_value.Size = new System.Drawing.Size(13, 13);
             this.lb_PhieuXuat2_SoPhieu_value.TabIndex = 17;
             this.lb_PhieuXuat2_SoPhieu_value.Text = "0";
+            this.lb_PhieuXuat2_SoPhieu_value.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lb_PhieuXuat1_SoPhieu_value
             // 
@@ -705,11 +711,12 @@
             this.lb_PhieuXuat1_SoPhieu_value.Size = new System.Drawing.Size(13, 13);
             this.lb_PhieuXuat1_SoPhieu_value.TabIndex = 12;
             this.lb_PhieuXuat1_SoPhieu_value.Text = "0";
+            this.lb_PhieuXuat1_SoPhieu_value.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lb_PhieuXuat2_SoPhieu
             // 
             this.lb_PhieuXuat2_SoPhieu.AutoSize = true;
-            this.lb_PhieuXuat2_SoPhieu.Location = new System.Drawing.Point(30, 83);
+            this.lb_PhieuXuat2_SoPhieu.Location = new System.Drawing.Point(13, 83);
             this.lb_PhieuXuat2_SoPhieu.Name = "lb_PhieuXuat2_SoPhieu";
             this.lb_PhieuXuat2_SoPhieu.Size = new System.Drawing.Size(84, 13);
             this.lb_PhieuXuat2_SoPhieu.TabIndex = 16;
@@ -718,7 +725,7 @@
             // lb_PhieuXuat1_Tien
             // 
             this.lb_PhieuXuat1_Tien.AutoSize = true;
-            this.lb_PhieuXuat1_Tien.Location = new System.Drawing.Point(30, 52);
+            this.lb_PhieuXuat1_Tien.Location = new System.Drawing.Point(13, 52);
             this.lb_PhieuXuat1_Tien.Name = "lb_PhieuXuat1_Tien";
             this.lb_PhieuXuat1_Tien.Size = new System.Drawing.Size(63, 13);
             this.lb_PhieuXuat1_Tien.TabIndex = 13;
@@ -743,6 +750,7 @@
             this.lb_PhieuXuat1_Tien_value.Size = new System.Drawing.Size(13, 13);
             this.lb_PhieuXuat1_Tien_value.TabIndex = 14;
             this.lb_PhieuXuat1_Tien_value.Text = "0";
+            this.lb_PhieuXuat1_Tien_value.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // grb_PhieuNhap
             // 
@@ -774,11 +782,12 @@
             this.lb_PhieuNhap2_Tien_value.Size = new System.Drawing.Size(13, 13);
             this.lb_PhieuNhap2_Tien_value.TabIndex = 9;
             this.lb_PhieuNhap2_Tien_value.Text = "0";
+            this.lb_PhieuNhap2_Tien_value.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lb_PhieuNhap2_Tien
             // 
             this.lb_PhieuNhap2_Tien.AutoSize = true;
-            this.lb_PhieuNhap2_Tien.Location = new System.Drawing.Point(30, 101);
+            this.lb_PhieuNhap2_Tien.Location = new System.Drawing.Point(14, 101);
             this.lb_PhieuNhap2_Tien.Name = "lb_PhieuNhap2_Tien";
             this.lb_PhieuNhap2_Tien.Size = new System.Drawing.Size(67, 13);
             this.lb_PhieuNhap2_Tien.TabIndex = 8;
@@ -793,11 +802,12 @@
             this.lb_PhieuNhap2_SoPhieu_value.Size = new System.Drawing.Size(13, 13);
             this.lb_PhieuNhap2_SoPhieu_value.TabIndex = 7;
             this.lb_PhieuNhap2_SoPhieu_value.Text = "0";
+            this.lb_PhieuNhap2_SoPhieu_value.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lb_PhieuNhap2_SoPhieu
             // 
             this.lb_PhieuNhap2_SoPhieu.AutoSize = true;
-            this.lb_PhieuNhap2_SoPhieu.Location = new System.Drawing.Point(30, 83);
+            this.lb_PhieuNhap2_SoPhieu.Location = new System.Drawing.Point(14, 83);
             this.lb_PhieuNhap2_SoPhieu.Name = "lb_PhieuNhap2_SoPhieu";
             this.lb_PhieuNhap2_SoPhieu.Size = new System.Drawing.Size(88, 13);
             this.lb_PhieuNhap2_SoPhieu.TabIndex = 6;
@@ -822,11 +832,12 @@
             this.lb_PhieuNhap1_Tien_value.Size = new System.Drawing.Size(13, 13);
             this.lb_PhieuNhap1_Tien_value.TabIndex = 4;
             this.lb_PhieuNhap1_Tien_value.Text = "0";
+            this.lb_PhieuNhap1_Tien_value.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lb_PhieuNhap1_Tien
             // 
             this.lb_PhieuNhap1_Tien.AutoSize = true;
-            this.lb_PhieuNhap1_Tien.Location = new System.Drawing.Point(30, 52);
+            this.lb_PhieuNhap1_Tien.Location = new System.Drawing.Point(14, 52);
             this.lb_PhieuNhap1_Tien.Name = "lb_PhieuNhap1_Tien";
             this.lb_PhieuNhap1_Tien.Size = new System.Drawing.Size(67, 13);
             this.lb_PhieuNhap1_Tien.TabIndex = 3;
@@ -841,11 +852,12 @@
             this.lb_PhieuNhap1_SoPhieu_value.Size = new System.Drawing.Size(13, 13);
             this.lb_PhieuNhap1_SoPhieu_value.TabIndex = 2;
             this.lb_PhieuNhap1_SoPhieu_value.Text = "0";
+            this.lb_PhieuNhap1_SoPhieu_value.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lb_PhieuNhap1_SoPhieu
             // 
             this.lb_PhieuNhap1_SoPhieu.AutoSize = true;
-            this.lb_PhieuNhap1_SoPhieu.Location = new System.Drawing.Point(30, 34);
+            this.lb_PhieuNhap1_SoPhieu.Location = new System.Drawing.Point(13, 34);
             this.lb_PhieuNhap1_SoPhieu.Name = "lb_PhieuNhap1_SoPhieu";
             this.lb_PhieuNhap1_SoPhieu.Size = new System.Drawing.Size(88, 13);
             this.lb_PhieuNhap1_SoPhieu.TabIndex = 1;
@@ -876,7 +888,7 @@
             // 
             // navBarControl1
             // 
-            this.navBarControl1.ActiveGroup = this.ng_HeThong;
+            this.navBarControl1.ActiveGroup = this.ng_ThongKe;
             this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.ng_HeThong,
@@ -917,41 +929,9 @@
             this.navBarControl1.Text = "navBarControl1";
             this.navBarControl1.View = new DevExpress.XtraNavBar.ViewInfo.StandardSkinNavigationPaneViewInfoRegistrator("Visual Studio 2013 Dark");
             // 
-            // ng_BanHang
-            // 
-            this.ng_BanHang.Caption = "4. Bán hàng";
-            this.ng_BanHang.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_BaoGia),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_PhieuDatHang),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_HoaDon)});
-            this.ng_BanHang.Name = "ng_BanHang";
-            this.ng_BanHang.SmallImage = ((System.Drawing.Image)(resources.GetObject("ng_BanHang.SmallImage")));
-            // 
-            // ni_BaoGia
-            // 
-            this.ni_BaoGia.Caption = "4.1. Báo giá";
-            this.ni_BaoGia.Name = "ni_BaoGia";
-            this.ni_BaoGia.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_BaoGia.SmallImage")));
-            this.ni_BaoGia.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_BaoGia_LinkClicked);
-            // 
-            // ni_PhieuDatHang
-            // 
-            this.ni_PhieuDatHang.Caption = "4.2. Đơn đặt hàng";
-            this.ni_PhieuDatHang.Name = "ni_PhieuDatHang";
-            this.ni_PhieuDatHang.SmallImage = global::QuanLyBanHang.Properties.Resources.basket_add;
-            this.ni_PhieuDatHang.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_PhieuDatHang_LinkClicked);
-            // 
-            // ni_HoaDon
-            // 
-            this.ni_HoaDon.Caption = "4.3. Hoá đơn";
-            this.ni_HoaDon.Name = "ni_HoaDon";
-            this.ni_HoaDon.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_HoaDon.SmallImage")));
-            this.ni_HoaDon.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_HoaDon_LinkClicked);
-            // 
             // ng_HeThong
             // 
             this.ng_HeThong.Caption = "1. Hệ thống";
-            this.ng_HeThong.Expanded = true;
             this.ng_HeThong.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.ni_ThongTinDonVi),
             new DevExpress.XtraNavBar.NavBarItemLink(this.ni_ThongTinTaiKhoan),
@@ -1044,9 +1024,42 @@
             this.ni_DanhSachNhanVien.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_DanhSachNhanVien.SmallImage")));
             this.ni_DanhSachNhanVien.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_DanhSachNhanVien_LinkClicked);
             // 
+            // ng_BanHang
+            // 
+            this.ng_BanHang.Caption = "4. Bán hàng";
+            this.ng_BanHang.Expanded = true;
+            this.ng_BanHang.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_BaoGia),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_PhieuDatHang),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_HoaDon)});
+            this.ng_BanHang.Name = "ng_BanHang";
+            this.ng_BanHang.SmallImage = ((System.Drawing.Image)(resources.GetObject("ng_BanHang.SmallImage")));
+            // 
+            // ni_BaoGia
+            // 
+            this.ni_BaoGia.Caption = "4.1. Báo giá";
+            this.ni_BaoGia.Name = "ni_BaoGia";
+            this.ni_BaoGia.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_BaoGia.SmallImage")));
+            this.ni_BaoGia.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_BaoGia_LinkClicked);
+            // 
+            // ni_PhieuDatHang
+            // 
+            this.ni_PhieuDatHang.Caption = "4.2. Đơn đặt hàng";
+            this.ni_PhieuDatHang.Name = "ni_PhieuDatHang";
+            this.ni_PhieuDatHang.SmallImage = global::QuanLyBanHang.Properties.Resources.basket_add;
+            this.ni_PhieuDatHang.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_PhieuDatHang_LinkClicked);
+            // 
+            // ni_HoaDon
+            // 
+            this.ni_HoaDon.Caption = "4.3. Hoá đơn";
+            this.ni_HoaDon.Name = "ni_HoaDon";
+            this.ni_HoaDon.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_HoaDon.SmallImage")));
+            this.ni_HoaDon.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_HoaDon_LinkClicked);
+            // 
             // ng_XuatNhapKho
             // 
             this.ng_XuatNhapKho.Caption = "5. Xuất nhập kho";
+            this.ng_XuatNhapKho.Expanded = true;
             this.ng_XuatNhapKho.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.ni_PhieuNhap),
             new DevExpress.XtraNavBar.NavBarItemLink(this.ni_PhieuXuat)});
@@ -1070,6 +1083,7 @@
             // ng_CongNo
             // 
             this.ng_CongNo.Caption = "6. Công nợ";
+            this.ng_CongNo.Expanded = true;
             this.ng_CongNo.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.ni_KhachHang),
             new DevExpress.XtraNavBar.NavBarItemLink(this.ni_ThongTinCongNo),
@@ -1101,6 +1115,7 @@
             // ng_ThongKe
             // 
             this.ng_ThongKe.Caption = "7. Thống kê";
+            this.ng_ThongKe.Expanded = true;
             this.ng_ThongKe.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.ni_BaoCaoTonKho),
             new DevExpress.XtraNavBar.NavBarItemLink(this.ni_BaoCaoCongNo),
@@ -1218,14 +1233,14 @@
         private System.Windows.Forms.Label lb_KhachHang_Tong;
         private System.Windows.Forms.Label lb_KhachHang;
         private System.Windows.Forms.Label lb_TienThu_Thang_value;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label lb_CongNo1;
         private System.Windows.Forms.Label lb_TienThu_Thang;
         private System.Windows.Forms.Label lb_SoNo;
         private System.Windows.Forms.Label lb_SoNo_Thang_value;
         private System.Windows.Forms.Label lb_SoNo_value;
         private System.Windows.Forms.Label lb_SoNo_Thang;
         private System.Windows.Forms.Label lb_TienThu;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lb_CongNo2;
         private System.Windows.Forms.Label lb_TienThu_value;
         private System.Windows.Forms.Label lb_HetHang_value;
         private System.Windows.Forms.Label lb_MaSanPham;

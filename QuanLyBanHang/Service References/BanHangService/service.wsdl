@@ -420,6 +420,24 @@
   <wsdl:message name="IDonDatHang_DonDatHang_GetNewID_ExceptionFault_FaultMessage">
     <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/System" name="detail" element="q45:Exception" />
   </wsdl:message>
+  <wsdl:message name="INhanNgonNgu_NhanNgonNgu_GetLabel_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhanNgonNgu_GetLabel" />
+  </wsdl:message>
+  <wsdl:message name="INhanNgonNgu_NhanNgonNgu_GetLabel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhanNgonNgu_GetLabelResponse" />
+  </wsdl:message>
+  <wsdl:message name="INhanNgonNgu_NhanNgonNgu_GetLabel_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/System" name="detail" element="q46:Exception" />
+  </wsdl:message>
+  <wsdl:message name="INhanNgonNgu_NhanNgonNgu_GetLabelByLang_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhanNgonNgu_GetLabelByLang" />
+  </wsdl:message>
+  <wsdl:message name="INhanNgonNgu_NhanNgonNgu_GetLabelByLang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhanNgonNgu_GetLabelByLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="INhanNgonNgu_NhanNgonNgu_GetLabelByLang_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/System" name="detail" element="q47:Exception" />
+  </wsdl:message>
   <wsdl:portType name="INhanVien">
     <wsdl:operation name="NhanVien_CheckLogIn">
       <wsdl:input wsaw:Action="http://tempuri.org/INhanVien/NhanVien_CheckLogIn" message="tns:INhanVien_NhanVien_CheckLogIn_InputMessage" />
@@ -671,6 +689,18 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_GetNewID" message="tns:IDonDatHang_DonDatHang_GetNewID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_GetNewIDResponse" message="tns:IDonDatHang_DonDatHang_GetNewID_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/IDonDatHang/DonDatHang_GetNewIDExceptionFault" name="ExceptionFault" message="tns:IDonDatHang_DonDatHang_GetNewID_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="INhanNgonNgu">
+    <wsdl:operation name="NhanNgonNgu_GetLabel">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhanNgonNgu/NhanNgonNgu_GetLabel" message="tns:INhanNgonNgu_NhanNgonNgu_GetLabel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhanNgonNgu/NhanNgonNgu_GetLabelResponse" message="tns:INhanNgonNgu_NhanNgonNgu_GetLabel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/INhanNgonNgu/NhanNgonNgu_GetLabelExceptionFault" name="ExceptionFault" message="tns:INhanNgonNgu_NhanNgonNgu_GetLabel_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NhanNgonNgu_GetLabelByLang">
+      <wsdl:input wsaw:Action="http://tempuri.org/INhanNgonNgu/NhanNgonNgu_GetLabelByLang" message="tns:INhanNgonNgu_NhanNgonNgu_GetLabelByLang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INhanNgonNgu/NhanNgonNgu_GetLabelByLangResponse" message="tns:INhanNgonNgu_NhanNgonNgu_GetLabelByLang_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/INhanNgonNgu/NhanNgonNgu_GetLabelByLangExceptionFault" name="ExceptionFault" message="tns:INhanNgonNgu_NhanNgonNgu_GetLabelByLang_ExceptionFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_INhanVien" type="tns:INhanVien">
@@ -1258,6 +1288,33 @@
       </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_INhanNgonNgu" type="tns:INhanNgonNgu">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NhanNgonNgu_GetLabel">
+      <soap:operation soapAction="http://tempuri.org/INhanNgonNgu/NhanNgonNgu_GetLabel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NhanNgonNgu_GetLabelByLang">
+      <soap:operation soapAction="http://tempuri.org/INhanNgonNgu/NhanNgonNgu_GetLabelByLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
   <wsdl:service name="BanHangService">
     <wsdl:port name="BasicHttpBinding_INhanVien" binding="tns:BasicHttpBinding_INhanVien">
       <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/NhanVien" />
@@ -1294,6 +1351,9 @@
     </wsdl:port>
     <wsdl:port name="BasicHttpBinding_IDonDatHang" binding="tns:BasicHttpBinding_IDonDatHang">
       <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/DonDatHang" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_INhanNgonNgu" binding="tns:BasicHttpBinding_INhanNgonNgu">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/NhanNgonNgu" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

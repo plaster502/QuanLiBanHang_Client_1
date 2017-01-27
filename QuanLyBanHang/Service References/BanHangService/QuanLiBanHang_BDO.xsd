@@ -232,4 +232,18 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DonDatHangCT" nillable="true" type="tns:DonDatHangCT" />
+  <xs:complexType name="ArrayOfNhanNgonNgu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NhanNgonNgu" nillable="true" type="tns:NhanNgonNgu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNhanNgonNgu" nillable="true" type="tns:ArrayOfNhanNgonNgu" />
+  <xs:complexType name="NhanNgonNgu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Chu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaNgonNgu" type="xs:int" />
+      <xs:element minOccurs="0" name="MaNhan" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NhanNgonNgu" nillable="true" type="tns:NhanNgonNgu" />
 </xs:schema>
