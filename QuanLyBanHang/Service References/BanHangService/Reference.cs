@@ -2090,6 +2090,83 @@ namespace QuanLyBanHang.BanHangService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NhanNgonNgu", Namespace="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO")]
+    [System.SerializableAttribute()]
+    public partial class NhanNgonNgu : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ChuField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int MaNgonNguField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int MaNhanField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Chu {
+            get {
+                return this.ChuField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChuField, value) != true)) {
+                    this.ChuField = value;
+                    this.RaisePropertyChanged("Chu");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int MaNgonNgu {
+            get {
+                return this.MaNgonNguField;
+            }
+            set {
+                if ((this.MaNgonNguField.Equals(value) != true)) {
+                    this.MaNgonNguField = value;
+                    this.RaisePropertyChanged("MaNgonNgu");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int MaNhan {
+            get {
+                return this.MaNhanField;
+            }
+            set {
+                if ((this.MaNhanField.Equals(value) != true)) {
+                    this.MaNhanField = value;
+                    this.RaisePropertyChanged("MaNhan");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="BanHangService.INhanVien")]
     public interface INhanVien {
@@ -2850,6 +2927,55 @@ namespace QuanLyBanHang.BanHangService {
         
         public string DonDatHang_GetNewID(int year, int month) {
             return base.Channel.DonDatHang_GetNewID(year, month);
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="BanHangService.INhanNgonNgu")]
+    public interface INhanNgonNgu {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INhanNgonNgu/NhanNgonNgu_GetLabel", ReplyAction="http://tempuri.org/INhanNgonNgu/NhanNgonNgu_GetLabelResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/INhanNgonNgu/NhanNgonNgu_GetLabelExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        string NhanNgonNgu_GetLabel(int _mangonngu, int _manhan);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INhanNgonNgu/NhanNgonNgu_GetLabelByLang", ReplyAction="http://tempuri.org/INhanNgonNgu/NhanNgonNgu_GetLabelByLangResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/INhanNgonNgu/NhanNgonNgu_GetLabelByLangExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        QuanLyBanHang.BanHangService.NhanNgonNgu[] NhanNgonNgu_GetLabelByLang(int _mangonngu);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface INhanNgonNguChannel : QuanLyBanHang.BanHangService.INhanNgonNgu, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class NhanNgonNguClient : System.ServiceModel.ClientBase<QuanLyBanHang.BanHangService.INhanNgonNgu>, QuanLyBanHang.BanHangService.INhanNgonNgu {
+        
+        public NhanNgonNguClient() {
+        }
+        
+        public NhanNgonNguClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public NhanNgonNguClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public NhanNgonNguClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public NhanNgonNguClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public string NhanNgonNgu_GetLabel(int _mangonngu, int _manhan) {
+            return base.Channel.NhanNgonNgu_GetLabel(_mangonngu, _manhan);
+        }
+        
+        public QuanLyBanHang.BanHangService.NhanNgonNgu[] NhanNgonNgu_GetLabelByLang(int _mangonngu) {
+            return base.Channel.NhanNgonNgu_GetLabelByLang(_mangonngu);
         }
     }
 }
