@@ -94,7 +94,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="DonGia" type="xs:decimal" />
       <xs:element minOccurs="0" name="MaHoaDon" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="MaSach" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaSanPham" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SoLuong" type="xs:int" />
     </xs:sequence>
   </xs:complexType>

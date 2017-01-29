@@ -875,7 +875,7 @@ namespace QuanLyBanHang.BanHangService {
         private string MaHoaDonField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MaSachField;
+        private string MaSanPhamField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int SoLuongField;
@@ -917,14 +917,14 @@ namespace QuanLyBanHang.BanHangService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string MaSach {
+        public string MaSanPham {
             get {
-                return this.MaSachField;
+                return this.MaSanPhamField;
             }
             set {
-                if ((object.ReferenceEquals(this.MaSachField, value) != true)) {
-                    this.MaSachField = value;
-                    this.RaisePropertyChanged("MaSach");
+                if ((object.ReferenceEquals(this.MaSanPhamField, value) != true)) {
+                    this.MaSanPhamField = value;
+                    this.RaisePropertyChanged("MaSanPham");
                 }
             }
         }
@@ -2383,7 +2383,28 @@ namespace QuanLyBanHang.BanHangService {
     public interface IHoaDon {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHoaDon/HoaDon_GetHoaDon", ReplyAction="http://tempuri.org/IHoaDon/HoaDon_GetHoaDonResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IHoaDon/HoaDon_GetHoaDonExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
         System.Data.DataSet HoaDon_GetHoaDon(QuanLyBanHang.BanHangService.HoaDon inp, string swhere);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHoaDon/HoaDon_LoadChiTiet", ReplyAction="http://tempuri.org/IHoaDon/HoaDon_LoadChiTietResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IHoaDon/HoaDon_LoadChiTietExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        QuanLyBanHang.BanHangService.HoaDonCT[] HoaDon_LoadChiTiet(string mahd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHoaDon/HoaDon_Insert", ReplyAction="http://tempuri.org/IHoaDon/HoaDon_InsertResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IHoaDon/HoaDon_InsertExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        bool HoaDon_Insert(QuanLyBanHang.BanHangService.HoaDon inp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHoaDon/HoaDon_Update", ReplyAction="http://tempuri.org/IHoaDon/HoaDon_UpdateResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IHoaDon/HoaDon_UpdateExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        bool HoaDon_Update(QuanLyBanHang.BanHangService.HoaDon inp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHoaDon/HoaDon_Delete", ReplyAction="http://tempuri.org/IHoaDon/HoaDon_DeleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IHoaDon/HoaDon_DeleteExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        bool HoaDon_Delete(string mahd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHoaDon/HoaDon_GetNewID", ReplyAction="http://tempuri.org/IHoaDon/HoaDon_GetNewIDResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IHoaDon/HoaDon_GetNewIDExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        string HoaDon_GetNewID(int year, int month);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2415,6 +2436,26 @@ namespace QuanLyBanHang.BanHangService {
         
         public System.Data.DataSet HoaDon_GetHoaDon(QuanLyBanHang.BanHangService.HoaDon inp, string swhere) {
             return base.Channel.HoaDon_GetHoaDon(inp, swhere);
+        }
+        
+        public QuanLyBanHang.BanHangService.HoaDonCT[] HoaDon_LoadChiTiet(string mahd) {
+            return base.Channel.HoaDon_LoadChiTiet(mahd);
+        }
+        
+        public bool HoaDon_Insert(QuanLyBanHang.BanHangService.HoaDon inp) {
+            return base.Channel.HoaDon_Insert(inp);
+        }
+        
+        public bool HoaDon_Update(QuanLyBanHang.BanHangService.HoaDon inp) {
+            return base.Channel.HoaDon_Update(inp);
+        }
+        
+        public bool HoaDon_Delete(string mahd) {
+            return base.Channel.HoaDon_Delete(mahd);
+        }
+        
+        public string HoaDon_GetNewID(int year, int month) {
+            return base.Channel.HoaDon_GetNewID(year, month);
         }
     }
     
