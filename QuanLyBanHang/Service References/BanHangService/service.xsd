@@ -265,10 +265,81 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="HoaDon_LoadChiTiet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mahd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HoaDon_LoadChiTietResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="HoaDon_LoadChiTietResult" nillable="true" type="q12:ArrayOfHoaDonCT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HoaDon_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q13:HoaDon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HoaDon_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HoaDon_InsertResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HoaDon_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q14:HoaDon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HoaDon_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HoaDon_UpdateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HoaDon_Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mahd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HoaDon_DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HoaDon_DeleteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HoaDon_GetNewID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="year" type="xs:int" />
+        <xs:element minOccurs="0" name="month" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HoaDon_GetNewIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HoaDon_GetNewIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="KhachHang_GetKhachHang">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q12:KhachHang" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q15:KhachHang" />
         <xs:element minOccurs="0" name="swhere" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
@@ -295,7 +366,7 @@
   <xs:element name="PhieuThu_GetPhieuThu">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q13:PhieuThu" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q16:PhieuThu" />
         <xs:element minOccurs="0" name="swhere" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
@@ -322,7 +393,7 @@
   <xs:element name="SanPham_GetSanPham">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q14:SanPham" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q17:SanPham" />
         <xs:element minOccurs="0" name="strsearch" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
@@ -330,7 +401,7 @@
   <xs:element name="SanPham_GetSanPhamResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="SanPham_GetSanPhamResult" nillable="true" type="q15:ArrayOfSanPham" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="SanPham_GetSanPhamResult" nillable="true" type="q18:ArrayOfSanPham" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -363,7 +434,7 @@
   <xs:element name="SanPham_Insert">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q16:SanPham" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q19:SanPham" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -377,7 +448,7 @@
   <xs:element name="SanPham_Update">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q17:SanPham" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q20:SanPham" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -410,14 +481,14 @@
   <xs:element name="DonVi_GetDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="DonVi_GetDataResult" nillable="true" type="q18:DonVi" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="DonVi_GetDataResult" nillable="true" type="q21:DonVi" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="DonVi_UpdateInfo">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q19:DonVi" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q22:DonVi" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -436,7 +507,7 @@
   <xs:element name="DonViTinh_GetDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="DonViTinh_GetDataResult" nillable="true" type="q20:ArrayOfDonViTinh" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="DonViTinh_GetDataResult" nillable="true" type="q23:ArrayOfDonViTinh" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -450,14 +521,14 @@
   <xs:element name="DonViTinh_SearchResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="DonViTinh_SearchResult" nillable="true" type="q21:ArrayOfDonViTinh" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="DonViTinh_SearchResult" nillable="true" type="q24:ArrayOfDonViTinh" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="DonViTinh_Insert">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q22:DonViTinh" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q25:DonViTinh" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -471,7 +542,7 @@
   <xs:element name="DonViTinh_Update">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q23:DonViTinh" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q26:DonViTinh" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -504,7 +575,7 @@
   <xs:element name="NhomSanPham_GetDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="NhomSanPham_GetDataResult" nillable="true" type="q24:ArrayOfNhomSanPham" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="NhomSanPham_GetDataResult" nillable="true" type="q27:ArrayOfNhomSanPham" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -518,14 +589,14 @@
   <xs:element name="NhomSanPham_SearchResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="NhomSanPham_SearchResult" nillable="true" type="q25:ArrayOfNhomSanPham" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="NhomSanPham_SearchResult" nillable="true" type="q28:ArrayOfNhomSanPham" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="NhomSanPham_Insert">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q26:NhomSanPham" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q29:NhomSanPham" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -539,7 +610,7 @@
   <xs:element name="NhomSanPham_Update">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q27:NhomSanPham" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q30:NhomSanPham" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -567,7 +638,7 @@
   <xs:element name="BaoGia_GetBaoGia">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q28:BaoGia" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q31:BaoGia" />
         <xs:element minOccurs="0" name="swhere" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
@@ -601,14 +672,14 @@
   <xs:element name="BaoGia_LoadChiTietResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="BaoGia_LoadChiTietResult" nillable="true" type="q29:ArrayOfBaoGiaCT" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="BaoGia_LoadChiTietResult" nillable="true" type="q32:ArrayOfBaoGiaCT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="BaoGia_Insert">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q30:BaoGia" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q33:BaoGia" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -622,7 +693,7 @@
   <xs:element name="BaoGia_Update">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q31:BaoGia" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q34:BaoGia" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -665,7 +736,7 @@
   <xs:element name="DonDatHang_GetDonHang">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q32:DonDatHang" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q35:DonDatHang" />
         <xs:element minOccurs="0" name="swhere" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
@@ -699,14 +770,14 @@
   <xs:element name="DonDatHang_LoadChiTietResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="DonDatHang_LoadChiTietResult" nillable="true" type="q33:ArrayOfDonDatHangCT" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="DonDatHang_LoadChiTietResult" nillable="true" type="q36:ArrayOfDonDatHangCT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="DonDatHang_Insert">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q34:DonDatHang" />
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q37:DonDatHang" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -720,7 +791,7 @@
   <xs:element name="DonDatHang_Update">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q35:DonDatHang" />
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="inp" nillable="true" type="q38:DonDatHang" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -785,7 +856,7 @@
   <xs:element name="NhanNgonNgu_GetLabelByLangResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="NhanNgonNgu_GetLabelByLangResult" nillable="true" type="q36:ArrayOfNhanNgonNgu" />
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/QuanLiBanHang_BDO" minOccurs="0" name="NhanNgonNgu_GetLabelByLangResult" nillable="true" type="q39:ArrayOfNhanNgonNgu" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

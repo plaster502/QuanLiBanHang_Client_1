@@ -118,6 +118,18 @@
     <Compile Include="MenuBanHang\uc_QuoteList.Designer.cs">
       <DependentUpon>uc_QuoteList.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuBanHang\uc_SellingInvoiceCreate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBanHang\uc_SellingInvoiceCreate.Designer.cs">
+      <DependentUpon>uc_SellingInvoiceCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBanHang\uc_SellingInvoiceList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBanHang\uc_SellingInvoiceList.Designer.cs">
+      <DependentUpon>uc_SellingInvoiceList.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuDanhMuc\uc_ProductUnit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -203,6 +215,12 @@
     <EmbeddedResource Include="MenuBanHang\uc_QuoteList.resx">
       <DependentUpon>uc_QuoteList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuBanHang\uc_SellingInvoiceCreate.resx">
+      <DependentUpon>uc_SellingInvoiceCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBanHang\uc_SellingInvoiceList.resx">
+      <DependentUpon>uc_SellingInvoiceList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuDanhMuc\uc_ProductUnit.resx">
       <DependentUpon>uc_ProductUnit.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +282,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.DonViTinh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.HoaDonCT.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.NhanNgonNgu.datasource">

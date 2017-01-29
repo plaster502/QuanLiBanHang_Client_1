@@ -116,8 +116,8 @@ namespace QuanLyBanHang
         //4.3. Hoá đơn
         private void ni_HoaDon_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //QuanLyBanSach.MenuNhanVien.uc_StaffList uc = new MenuNhanVien.uc_StaffList();
-            //LoadTab("Danh sách nhân viên", uc);
+            QuanLyBanHang.MenuBanHang.uc_SellingInvoiceList uc = new MenuBanHang.uc_SellingInvoiceList();
+            LoadTab("Danh sách hoá đơn", uc);
         }
         #endregion
 
