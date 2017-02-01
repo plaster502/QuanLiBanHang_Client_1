@@ -62,6 +62,9 @@ namespace QuanLyBanHang.MenuBanHang
                     txt_DonHang.Text = hd.DonDatHang.ToString();
                     txt_TongTien.Text = hd.TongTien.ToString("#,##");
                     txt_TongTien.Enabled = false;
+                    txt_DaThanhToan.Text = hd.DaThanhToan.ToString("#,##");
+                    txt_ConLai.Text = hd.ConLai.ToString("#,##");
+                    txt_ConLai.Enabled = false;
                     foreach (HoaDonCT ct in hd.DSChiTiet)
                     {
                         DataRow row = dtb.NewRow();
@@ -439,13 +442,23 @@ namespace QuanLyBanHang.MenuBanHang
             }
         }
 
+        private decimal Remain()
+        {
+            decimal ThanhToan = 0;
+            try
+            {
+                ThanhToan = Convert.ToDecimal(txt_DaThanhToan.Text);
+            }
+            catch (Exception ex)
+            {
+                ThanhToan = 0;
+            }
+            return Convert.ToDecimal(txt_TongTien.Text) - ThanhToan;
+        }
+
         private void txt_DaThanhToan_TextChanged(object sender, EventArgs e)
         {
-            if(!string.IsNullOrEmpty(txt_DaThanhToan.Text))
-            {
-                decimal conlai = Convert.ToDecimal(txt_TongTien.Text) - Convert.ToDecimal(txt_DaThanhToan.Text);
-                txt_ConLai.Text = conlai.ToString("#,###");
-            }
+            txt_ConLai.Text = Remain().ToString("#,##");
         }
     }
 }
