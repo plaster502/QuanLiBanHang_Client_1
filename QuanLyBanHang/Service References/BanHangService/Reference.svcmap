@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="92d971fe-131c-4042-afe3-db22821f3579" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a7ab7faf-92f4-499d-89f6-afbe138b655f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -18,15 +18,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://localhost:39242/Host/BanHangService.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="8fd80d7b-c03d-4930-bede-c6310e543b63" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="57543790-3ac7-4253-b107-ea0217aa691f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="5614c777-0770-456d-ac1d-bd7b03d487ad" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/mex" />
-    <MetadataFile FileName="System.xsd" MetadataType="Schema" ID="90cd3242-9c1c-455d-9edf-01388659cc0d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/mex" />
-    <MetadataFile FileName="QuanLiBanHang_BDO.xsd" MetadataType="Schema" ID="d179c78e-c8dc-4743-8907-05bad75bde90" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/mex" />
-    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="b8c3e943-53f1-4abf-bc8c-27b184838bb4" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/QuanLiBanHang_Service/mex" />
+    <MetadataFile FileName="BanHangService5.xsd" MetadataType="Schema" ID="a7593a0a-866d-4f1e-a33a-30fd004cbab3" SourceId="1" SourceUrl="http://localhost:39242/Host/BanHangService.svc?xsd=xsd1" />
+    <MetadataFile FileName="BanHangService51.xsd" MetadataType="Schema" ID="322a171f-88f7-466d-ba4a-a0757e8c4d38" SourceId="1" SourceUrl="http://localhost:39242/Host/BanHangService.svc?xsd=xsd4" />
+    <MetadataFile FileName="BanHangService52.xsd" MetadataType="Schema" ID="49f2cd7d-674f-4dc7-b334-1386ec13726e" SourceId="1" SourceUrl="http://localhost:39242/Host/BanHangService.svc?xsd=xsd2" />
+    <MetadataFile FileName="BanHangService53.xsd" MetadataType="Schema" ID="1236a1b4-e777-4316-b0d2-02436d09117f" SourceId="1" SourceUrl="http://localhost:39242/Host/BanHangService.svc?xsd=xsd3" />
+    <MetadataFile FileName="BanHangService54.xsd" MetadataType="Schema" ID="cc1c7ea9-b67e-4a5d-b3ed-18fbf7f502e0" SourceId="1" SourceUrl="http://localhost:39242/Host/BanHangService.svc?xsd=xsd0" />
+    <MetadataFile FileName="BanHangService1.wsdl" MetadataType="Wsdl" ID="e54866aa-6d38-4f94-a79d-6ef8abdfdcc0" SourceId="1" SourceUrl="http://localhost:39242/Host/BanHangService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
