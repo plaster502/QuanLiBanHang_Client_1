@@ -269,52 +269,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\BanHangService\QuanLiBanHang_BDO.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.BaoGiaCT.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.DonDatHangCT.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.DonVi.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.DonViTinh.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.HoaDonCT.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.NhanNgonNgu.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.NhanVien.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.NhomSanPham.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.PhieuNhapCT.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.SanPham.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\BanHangService\service.wsdl" />
-    <None Include="Service References\BanHangService\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\BanHangService\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\BanHangService\service2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\BanHangService\System.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -395,15 +349,61 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="inventory-maintenance.ico" />
-    <None Include="Resources\cancel.png" />
-    <None Include="Resources\door_in.png" />
-    <None Include="Resources\basket_add.png" />
+    <None Include="Service References\BanHangService\BanHangService1.wsdl" />
+    <None Include="Service References\BanHangService\BanHangService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanHangService\BanHangService51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanHangService\BanHangService52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanHangService\BanHangService53.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanHangService\BanHangService54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.BaoGiaCT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.DonDatHangCT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.DonVi.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.DonViTinh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.HoaDonCT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.NhanNgonNgu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.NhanVien.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.NhomSanPham.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.PhieuNhapCT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.SanPham.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\BanHangService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Service References\BanHangService\configuration.svcinfo" />
     <None Include="Service References\BanHangService\configuration91.svcinfo" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\door_in.png" />
+    <None Include="Resources\basket_add.png" />
     <None Include="Resources\userdefault.png" />
   </ItemGroup>
   <ItemGroup>
@@ -412,7 +412,6 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\BanHangService\" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
