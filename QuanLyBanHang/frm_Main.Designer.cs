@@ -98,6 +98,11 @@
             this.lb_PhieuNhap1 = new System.Windows.Forms.Label();
             this.tabCtrl_Main = new System.Windows.Forms.TabControl();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
+            this.ng_ThongKe = new DevExpress.XtraNavBar.NavBarGroup();
+            this.ni_BaoCaoTonKho = new DevExpress.XtraNavBar.NavBarItem();
+            this.ni_BaoCaoCongNo = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarSeparatorItem1 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
+            this.ni_KhoaSoThang = new DevExpress.XtraNavBar.NavBarItem();
             this.ng_HeThong = new DevExpress.XtraNavBar.NavBarGroup();
             this.ni_ThongTinDonVi = new DevExpress.XtraNavBar.NavBarItem();
             this.ni_ThongTinTaiKhoan = new DevExpress.XtraNavBar.NavBarItem();
@@ -121,11 +126,6 @@
             this.ni_KhachHang = new DevExpress.XtraNavBar.NavBarItem();
             this.ni_ThongTinCongNo = new DevExpress.XtraNavBar.NavBarItem();
             this.ni_DanhSachPhieuThu = new DevExpress.XtraNavBar.NavBarItem();
-            this.ng_ThongKe = new DevExpress.XtraNavBar.NavBarGroup();
-            this.ni_BaoCaoTonKho = new DevExpress.XtraNavBar.NavBarItem();
-            this.ni_BaoCaoCongNo = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarSeparatorItem1 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.ni_KhoaSoThang = new DevExpress.XtraNavBar.NavBarItem();
             this.tab_MenuMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Main)).BeginInit();
             this.pn_TotalReport.SuspendLayout();
@@ -888,7 +888,7 @@
             // 
             // navBarControl1
             // 
-            this.navBarControl1.ActiveGroup = this.ng_ThongKe;
+            this.navBarControl1.ActiveGroup = this.ng_HeThong;
             this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.ng_HeThong,
@@ -929,9 +929,53 @@
             this.navBarControl1.Text = "navBarControl1";
             this.navBarControl1.View = new DevExpress.XtraNavBar.ViewInfo.StandardSkinNavigationPaneViewInfoRegistrator("Visual Studio 2013 Dark");
             // 
+            // ng_ThongKe
+            // 
+            this.ng_ThongKe.Caption = "7. Thống kê";
+            this.ng_ThongKe.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_BaoCaoTonKho),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_BaoCaoCongNo),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem1),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_KhoaSoThang)});
+            this.ng_ThongKe.Name = "ng_ThongKe";
+            this.ng_ThongKe.SmallImage = ((System.Drawing.Image)(resources.GetObject("ng_ThongKe.SmallImage")));
+            // 
+            // ni_BaoCaoTonKho
+            // 
+            this.ni_BaoCaoTonKho.Caption = "7.1. Báo cáo tồn kho";
+            this.ni_BaoCaoTonKho.Name = "ni_BaoCaoTonKho";
+            this.ni_BaoCaoTonKho.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_BaoCaoTonKho.SmallImage")));
+            this.ni_BaoCaoTonKho.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_BaoCaoTonKho_LinkClicked);
+            // 
+            // ni_BaoCaoCongNo
+            // 
+            this.ni_BaoCaoCongNo.Caption = "7.2. Báo cáo công nợ";
+            this.ni_BaoCaoCongNo.Name = "ni_BaoCaoCongNo";
+            this.ni_BaoCaoCongNo.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_BaoCaoCongNo.SmallImage")));
+            this.ni_BaoCaoCongNo.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_BaoCaoCongNo_LinkClicked);
+            // 
+            // navBarSeparatorItem1
+            // 
+            this.navBarSeparatorItem1.CanDrag = false;
+            this.navBarSeparatorItem1.Enabled = false;
+            this.navBarSeparatorItem1.Hint = null;
+            this.navBarSeparatorItem1.LargeImageIndex = 0;
+            this.navBarSeparatorItem1.LargeImageSize = new System.Drawing.Size(0, 0);
+            this.navBarSeparatorItem1.Name = "navBarSeparatorItem1";
+            this.navBarSeparatorItem1.SmallImageIndex = 0;
+            this.navBarSeparatorItem1.SmallImageSize = new System.Drawing.Size(0, 0);
+            // 
+            // ni_KhoaSoThang
+            // 
+            this.ni_KhoaSoThang.Caption = "7.3. Khoá sổ";
+            this.ni_KhoaSoThang.Name = "ni_KhoaSoThang";
+            this.ni_KhoaSoThang.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_KhoaSoThang.SmallImage")));
+            this.ni_KhoaSoThang.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_KhoaSo_LinkClicked);
+            // 
             // ng_HeThong
             // 
             this.ng_HeThong.Caption = "1. Hệ thống";
+            this.ng_HeThong.Expanded = true;
             this.ng_HeThong.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.ni_ThongTinDonVi),
             new DevExpress.XtraNavBar.NavBarItemLink(this.ni_ThongTinTaiKhoan),
@@ -1027,7 +1071,6 @@
             // ng_BanHang
             // 
             this.ng_BanHang.Caption = "4. Bán hàng";
-            this.ng_BanHang.Expanded = true;
             this.ng_BanHang.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.ni_BaoGia),
             new DevExpress.XtraNavBar.NavBarItemLink(this.ni_PhieuDatHang),
@@ -1059,7 +1102,6 @@
             // ng_XuatNhapKho
             // 
             this.ng_XuatNhapKho.Caption = "5. Xuất nhập kho";
-            this.ng_XuatNhapKho.Expanded = true;
             this.ng_XuatNhapKho.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.ni_PhieuNhap),
             new DevExpress.XtraNavBar.NavBarItemLink(this.ni_PhieuXuat)});
@@ -1083,7 +1125,6 @@
             // ng_CongNo
             // 
             this.ng_CongNo.Caption = "6. Công nợ";
-            this.ng_CongNo.Expanded = true;
             this.ng_CongNo.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.ni_KhachHang),
             new DevExpress.XtraNavBar.NavBarItemLink(this.ni_ThongTinCongNo),
@@ -1111,50 +1152,6 @@
             this.ni_DanhSachPhieuThu.Name = "ni_DanhSachPhieuThu";
             this.ni_DanhSachPhieuThu.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_DanhSachPhieuThu.SmallImage")));
             this.ni_DanhSachPhieuThu.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_DanhSachPhieuThu_LinkClicked);
-            // 
-            // ng_ThongKe
-            // 
-            this.ng_ThongKe.Caption = "7. Thống kê";
-            this.ng_ThongKe.Expanded = true;
-            this.ng_ThongKe.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_BaoCaoTonKho),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_BaoCaoCongNo),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem1),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.ni_KhoaSoThang)});
-            this.ng_ThongKe.Name = "ng_ThongKe";
-            this.ng_ThongKe.SmallImage = ((System.Drawing.Image)(resources.GetObject("ng_ThongKe.SmallImage")));
-            // 
-            // ni_BaoCaoTonKho
-            // 
-            this.ni_BaoCaoTonKho.Caption = "7.1. Báo cáo tồn kho";
-            this.ni_BaoCaoTonKho.Name = "ni_BaoCaoTonKho";
-            this.ni_BaoCaoTonKho.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_BaoCaoTonKho.SmallImage")));
-            this.ni_BaoCaoTonKho.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_BaoCaoTonKho_LinkClicked);
-            // 
-            // ni_BaoCaoCongNo
-            // 
-            this.ni_BaoCaoCongNo.Caption = "7.2. Báo cáo công nợ";
-            this.ni_BaoCaoCongNo.Name = "ni_BaoCaoCongNo";
-            this.ni_BaoCaoCongNo.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_BaoCaoCongNo.SmallImage")));
-            this.ni_BaoCaoCongNo.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_BaoCaoCongNo_LinkClicked);
-            // 
-            // navBarSeparatorItem1
-            // 
-            this.navBarSeparatorItem1.CanDrag = false;
-            this.navBarSeparatorItem1.Enabled = false;
-            this.navBarSeparatorItem1.Hint = null;
-            this.navBarSeparatorItem1.LargeImageIndex = 0;
-            this.navBarSeparatorItem1.LargeImageSize = new System.Drawing.Size(0, 0);
-            this.navBarSeparatorItem1.Name = "navBarSeparatorItem1";
-            this.navBarSeparatorItem1.SmallImageIndex = 0;
-            this.navBarSeparatorItem1.SmallImageSize = new System.Drawing.Size(0, 0);
-            // 
-            // ni_KhoaSoThang
-            // 
-            this.ni_KhoaSoThang.Caption = "7.3. Khoá sổ";
-            this.ni_KhoaSoThang.Name = "ni_KhoaSoThang";
-            this.ni_KhoaSoThang.SmallImage = ((System.Drawing.Image)(resources.GetObject("ni_KhoaSoThang.SmallImage")));
-            this.ni_KhoaSoThang.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ni_KhoaSo_LinkClicked);
             // 
             // frm_Main
             // 
