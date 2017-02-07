@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a7ab7faf-92f4-499d-89f6-afbe138b655f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="825f5047-06d8-4096-9abe-6cbe64d9cd89" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -18,15 +18,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:39242/Host/BanHangService.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost/ERPService/ERPService.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="BanHangService5.xsd" MetadataType="Schema" ID="a7593a0a-866d-4f1e-a33a-30fd004cbab3" SourceId="1" SourceUrl="http://localhost:39242/Host/BanHangService.svc?xsd=xsd1" />
-    <MetadataFile FileName="BanHangService51.xsd" MetadataType="Schema" ID="322a171f-88f7-466d-ba4a-a0757e8c4d38" SourceId="1" SourceUrl="http://localhost:39242/Host/BanHangService.svc?xsd=xsd4" />
-    <MetadataFile FileName="BanHangService52.xsd" MetadataType="Schema" ID="49f2cd7d-674f-4dc7-b334-1386ec13726e" SourceId="1" SourceUrl="http://localhost:39242/Host/BanHangService.svc?xsd=xsd2" />
-    <MetadataFile FileName="BanHangService53.xsd" MetadataType="Schema" ID="1236a1b4-e777-4316-b0d2-02436d09117f" SourceId="1" SourceUrl="http://localhost:39242/Host/BanHangService.svc?xsd=xsd3" />
-    <MetadataFile FileName="BanHangService54.xsd" MetadataType="Schema" ID="cc1c7ea9-b67e-4a5d-b3ed-18fbf7f502e0" SourceId="1" SourceUrl="http://localhost:39242/Host/BanHangService.svc?xsd=xsd0" />
-    <MetadataFile FileName="BanHangService1.wsdl" MetadataType="Wsdl" ID="e54866aa-6d38-4f94-a79d-6ef8abdfdcc0" SourceId="1" SourceUrl="http://localhost:39242/Host/BanHangService.svc?wsdl" />
+    <MetadataFile FileName="ERPService.xsd" MetadataType="Schema" ID="c7e03f53-3a7e-4685-a79e-81752c63992f" SourceId="1" SourceUrl="http://localhost/ERPService/ERPService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ERPService1.xsd" MetadataType="Schema" ID="ca72b1b6-09fe-4993-b1e4-5d27177138b8" SourceId="1" SourceUrl="http://localhost/ERPService/ERPService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ERPService2.xsd" MetadataType="Schema" ID="7d8de200-2c4a-4d6c-b9d3-c613ed2b17ce" SourceId="1" SourceUrl="http://localhost/ERPService/ERPService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ERPService3.xsd" MetadataType="Schema" ID="0f26ccbf-bb39-40bc-8da9-920f885c0975" SourceId="1" SourceUrl="http://localhost/ERPService/ERPService.svc?xsd=xsd3" />
+    <MetadataFile FileName="BanHangService.wsdl" MetadataType="Wsdl" ID="b53e61ac-10fa-495b-b7d2-568081ade5fb" SourceId="1" SourceUrl="http://localhost/ERPService/ERPService.svc?wsdl" />
+    <MetadataFile FileName="ERPService4.xsd" MetadataType="Schema" ID="b308fb3e-3491-47a3-9411-85f57349c046" SourceId="1" SourceUrl="http://localhost/ERPService/ERPService.svc?xsd=xsd4" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

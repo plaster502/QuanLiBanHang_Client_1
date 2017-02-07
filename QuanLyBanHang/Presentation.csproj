@@ -269,6 +269,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Service References\BanHangService\BanHangService.wsdl" />
+    <None Include="Service References\BanHangService\ERPService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanHangService\ERPService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanHangService\ERPService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanHangService\ERPService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanHangService\ERPService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -349,22 +365,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="inventory-maintenance.ico" />
-    <None Include="Service References\BanHangService\BanHangService1.wsdl" />
-    <None Include="Service References\BanHangService\BanHangService5.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\BanHangService\BanHangService51.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\BanHangService\BanHangService52.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\BanHangService\BanHangService53.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\BanHangService\BanHangService54.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.BaoGiaCT.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
