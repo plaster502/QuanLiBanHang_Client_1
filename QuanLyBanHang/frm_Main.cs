@@ -131,8 +131,8 @@ namespace QuanLyBanHang
         // 5.2. Phiếu xuất
         private void ni_PhieuXuat_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //QuanLyBanSach.MenuXuatNhapKho.uc_OutInvenList uc = new MenuXuatNhapKho.uc_OutInvenList();
-            //LoadTab("Danh sách hoá đơn", uc);
+            QuanLyBanHang.MenuXuatNhapKho.uc_OutInvenList uc = new MenuXuatNhapKho.uc_OutInvenList();
+            LoadTab("Danh sách phiếu xuất", uc);
         }
         #endregion
 

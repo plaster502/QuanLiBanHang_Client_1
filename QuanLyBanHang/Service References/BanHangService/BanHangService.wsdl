@@ -369,6 +369,51 @@
   <wsdl:message name="IPhieuXuat_PhieuXuat_GetPhieuXuat_ExceptionFault_FaultMessage">
     <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/System" name="detail" element="q40:Exception" />
   </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_LoadChiTiet_InputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuXuat_LoadChiTiet" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_LoadChiTiet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuXuat_LoadChiTietResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_LoadChiTiet_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/System" name="detail" element="q41:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuXuat_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuXuat_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_Insert_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/System" name="detail" element="q42:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuXuat_Update" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuXuat_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_Update_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/System" name="detail" element="q43:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuXuat_Delete" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuXuat_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_Delete_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/System" name="detail" element="q44:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_GetNewID_InputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuXuat_GetNewID" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_GetNewID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhieuXuat_GetNewIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhieuXuat_PhieuXuat_GetNewID_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/System" name="detail" element="q45:Exception" />
+  </wsdl:message>
   <wsdl:message name="IPhieuNhap_PhieuNhap_GetPhieuNhap_InputMessage">
     <wsdl:part name="parameters" element="tns:PhieuNhap_GetPhieuNhap" />
   </wsdl:message>
@@ -376,7 +421,7 @@
     <wsdl:part name="parameters" element="tns:PhieuNhap_GetPhieuNhapResponse" />
   </wsdl:message>
   <wsdl:message name="IPhieuNhap_PhieuNhap_GetPhieuNhap_ExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/System" name="detail" element="q41:Exception" />
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/System" name="detail" element="q46:Exception" />
   </wsdl:message>
   <wsdl:message name="IPhieuNhap_PhieuNhap_LoadChiTiet_InputMessage">
     <wsdl:part name="parameters" element="tns:PhieuNhap_LoadChiTiet" />
@@ -385,7 +430,7 @@
     <wsdl:part name="parameters" element="tns:PhieuNhap_LoadChiTietResponse" />
   </wsdl:message>
   <wsdl:message name="IPhieuNhap_PhieuNhap_LoadChiTiet_ExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/System" name="detail" element="q42:Exception" />
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/System" name="detail" element="q47:Exception" />
   </wsdl:message>
   <wsdl:message name="IPhieuNhap_PhieuNhap_Delete_InputMessage">
     <wsdl:part name="parameters" element="tns:PhieuNhap_Delete" />
@@ -394,7 +439,7 @@
     <wsdl:part name="parameters" element="tns:PhieuNhap_DeleteResponse" />
   </wsdl:message>
   <wsdl:message name="IPhieuNhap_PhieuNhap_Delete_ExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/System" name="detail" element="q43:Exception" />
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/System" name="detail" element="q48:Exception" />
   </wsdl:message>
   <wsdl:message name="IPhieuNhap_PhieuNhap_GetNewID_InputMessage">
     <wsdl:part name="parameters" element="tns:PhieuNhap_GetNewID" />
@@ -403,7 +448,7 @@
     <wsdl:part name="parameters" element="tns:PhieuNhap_GetNewIDResponse" />
   </wsdl:message>
   <wsdl:message name="IPhieuNhap_PhieuNhap_GetNewID_ExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/System" name="detail" element="q44:Exception" />
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/System" name="detail" element="q49:Exception" />
   </wsdl:message>
   <wsdl:message name="IPhieuNhap_PhieuNhap_Insert_InputMessage">
     <wsdl:part name="parameters" element="tns:PhieuNhap_Insert" />
@@ -412,7 +457,7 @@
     <wsdl:part name="parameters" element="tns:PhieuNhap_InsertResponse" />
   </wsdl:message>
   <wsdl:message name="IPhieuNhap_PhieuNhap_Insert_ExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/System" name="detail" element="q45:Exception" />
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/System" name="detail" element="q50:Exception" />
   </wsdl:message>
   <wsdl:message name="IPhieuNhap_PhieuNhap_Update_InputMessage">
     <wsdl:part name="parameters" element="tns:PhieuNhap_Update" />
@@ -421,7 +466,7 @@
     <wsdl:part name="parameters" element="tns:PhieuNhap_UpdateResponse" />
   </wsdl:message>
   <wsdl:message name="IPhieuNhap_PhieuNhap_Update_ExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/System" name="detail" element="q46:Exception" />
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/System" name="detail" element="q51:Exception" />
   </wsdl:message>
   <wsdl:message name="INhanVien_NhanVien_CheckLogIn_InputMessage">
     <wsdl:part name="parameters" element="tns:NhanVien_CheckLogIn" />
@@ -430,7 +475,7 @@
     <wsdl:part name="parameters" element="tns:NhanVien_CheckLogInResponse" />
   </wsdl:message>
   <wsdl:message name="INhanVien_NhanVien_CheckLogIn_ExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/System" name="detail" element="q47:Exception" />
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/System" name="detail" element="q52:Exception" />
   </wsdl:message>
   <wsdl:message name="INhanVien_NhanVien_GetNhanVien_InputMessage">
     <wsdl:part name="parameters" element="tns:NhanVien_GetNhanVien" />
@@ -439,7 +484,7 @@
     <wsdl:part name="parameters" element="tns:NhanVien_GetNhanVienResponse" />
   </wsdl:message>
   <wsdl:message name="INhanVien_NhanVien_GetNhanVien_ExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/System" name="detail" element="q48:Exception" />
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/System" name="detail" element="q53:Exception" />
   </wsdl:message>
   <wsdl:message name="INhanVien_NhanVien_GetNhanVienByID_InputMessage">
     <wsdl:part name="parameters" element="tns:NhanVien_GetNhanVienByID" />
@@ -448,7 +493,7 @@
     <wsdl:part name="parameters" element="tns:NhanVien_GetNhanVienByIDResponse" />
   </wsdl:message>
   <wsdl:message name="INhanVien_NhanVien_GetNhanVienByID_ExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/System" name="detail" element="q49:Exception" />
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/System" name="detail" element="q54:Exception" />
   </wsdl:message>
   <wsdl:message name="INhanVien_NhanVien_UpdatePersonalInfo_InputMessage">
     <wsdl:part name="parameters" element="tns:NhanVien_UpdatePersonalInfo" />
@@ -457,7 +502,7 @@
     <wsdl:part name="parameters" element="tns:NhanVien_UpdatePersonalInfoResponse" />
   </wsdl:message>
   <wsdl:message name="INhanVien_NhanVien_UpdatePersonalInfo_ExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/System" name="detail" element="q50:Exception" />
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/System" name="detail" element="q55:Exception" />
   </wsdl:message>
   <wsdl:message name="INhanVien_NhanVien_Insert_InputMessage">
     <wsdl:part name="parameters" element="tns:NhanVien_Insert" />
@@ -466,7 +511,7 @@
     <wsdl:part name="parameters" element="tns:NhanVien_InsertResponse" />
   </wsdl:message>
   <wsdl:message name="INhanVien_NhanVien_Insert_ExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/System" name="detail" element="q51:Exception" />
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/System" name="detail" element="q56:Exception" />
   </wsdl:message>
   <wsdl:message name="INhanVien_NhanVien_Update_InputMessage">
     <wsdl:part name="parameters" element="tns:NhanVien_Update" />
@@ -475,7 +520,7 @@
     <wsdl:part name="parameters" element="tns:NhanVien_UpdateResponse" />
   </wsdl:message>
   <wsdl:message name="INhanVien_NhanVien_Update_ExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/System" name="detail" element="q52:Exception" />
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/System" name="detail" element="q57:Exception" />
   </wsdl:message>
   <wsdl:message name="INhanVien_NhanVien_Delete_InputMessage">
     <wsdl:part name="parameters" element="tns:NhanVien_Delete" />
@@ -484,7 +529,7 @@
     <wsdl:part name="parameters" element="tns:NhanVien_DeleteResponse" />
   </wsdl:message>
   <wsdl:message name="INhanVien_NhanVien_Delete_ExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/System" name="detail" element="q53:Exception" />
+    <wsdl:part xmlns:q58="http://schemas.datacontract.org/2004/07/System" name="detail" element="q58:Exception" />
   </wsdl:message>
   <wsdl:portType name="IBaoGia">
     <wsdl:operation name="BaoGia_GetBaoGia">
@@ -706,6 +751,31 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_GetPhieuXuat" message="tns:IPhieuXuat_PhieuXuat_GetPhieuXuat_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_GetPhieuXuatResponse" message="tns:IPhieuXuat_PhieuXuat_GetPhieuXuat_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_GetPhieuXuatExceptionFault" name="ExceptionFault" message="tns:IPhieuXuat_PhieuXuat_GetPhieuXuat_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PhieuXuat_LoadChiTiet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_LoadChiTiet" message="tns:IPhieuXuat_PhieuXuat_LoadChiTiet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_LoadChiTietResponse" message="tns:IPhieuXuat_PhieuXuat_LoadChiTiet_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_LoadChiTietExceptionFault" name="ExceptionFault" message="tns:IPhieuXuat_PhieuXuat_LoadChiTiet_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PhieuXuat_Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_Insert" message="tns:IPhieuXuat_PhieuXuat_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_InsertResponse" message="tns:IPhieuXuat_PhieuXuat_Insert_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_InsertExceptionFault" name="ExceptionFault" message="tns:IPhieuXuat_PhieuXuat_Insert_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PhieuXuat_Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_Update" message="tns:IPhieuXuat_PhieuXuat_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_UpdateResponse" message="tns:IPhieuXuat_PhieuXuat_Update_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_UpdateExceptionFault" name="ExceptionFault" message="tns:IPhieuXuat_PhieuXuat_Update_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PhieuXuat_Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_Delete" message="tns:IPhieuXuat_PhieuXuat_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_DeleteResponse" message="tns:IPhieuXuat_PhieuXuat_Delete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_DeleteExceptionFault" name="ExceptionFault" message="tns:IPhieuXuat_PhieuXuat_Delete_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PhieuXuat_GetNewID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_GetNewID" message="tns:IPhieuXuat_PhieuXuat_GetNewID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_GetNewIDResponse" message="tns:IPhieuXuat_PhieuXuat_GetNewID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPhieuXuat/PhieuXuat_GetNewIDExceptionFault" name="ExceptionFault" message="tns:IPhieuXuat_PhieuXuat_GetNewID_ExceptionFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="IPhieuNhap">
@@ -1279,6 +1349,66 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="PhieuXuat_GetPhieuXuat">
       <soap:operation soapAction="http://tempuri.org/IPhieuXuat/PhieuXuat_GetPhieuXuat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PhieuXuat_LoadChiTiet">
+      <soap:operation soapAction="http://tempuri.org/IPhieuXuat/PhieuXuat_LoadChiTiet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PhieuXuat_Insert">
+      <soap:operation soapAction="http://tempuri.org/IPhieuXuat/PhieuXuat_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PhieuXuat_Update">
+      <soap:operation soapAction="http://tempuri.org/IPhieuXuat/PhieuXuat_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PhieuXuat_Delete">
+      <soap:operation soapAction="http://tempuri.org/IPhieuXuat/PhieuXuat_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PhieuXuat_GetNewID">
+      <soap:operation soapAction="http://tempuri.org/IPhieuXuat/PhieuXuat_GetNewID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

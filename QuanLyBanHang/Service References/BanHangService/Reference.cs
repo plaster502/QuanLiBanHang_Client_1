@@ -2816,6 +2816,26 @@ namespace QuanLyBanHang.BanHangService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuXuat/PhieuXuat_GetPhieuXuat", ReplyAction="http://tempuri.org/IPhieuXuat/PhieuXuat_GetPhieuXuatResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IPhieuXuat/PhieuXuat_GetPhieuXuatExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
         System.Data.DataSet PhieuXuat_GetPhieuXuat(QuanLyBanHang.BanHangService.PhieuXuat inp, string swhere);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuXuat/PhieuXuat_LoadChiTiet", ReplyAction="http://tempuri.org/IPhieuXuat/PhieuXuat_LoadChiTietResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IPhieuXuat/PhieuXuat_LoadChiTietExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        QuanLyBanHang.BanHangService.PhieuXuatCT[] PhieuXuat_LoadChiTiet(string mapx);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuXuat/PhieuXuat_Insert", ReplyAction="http://tempuri.org/IPhieuXuat/PhieuXuat_InsertResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IPhieuXuat/PhieuXuat_InsertExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        bool PhieuXuat_Insert(QuanLyBanHang.BanHangService.PhieuXuat inp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuXuat/PhieuXuat_Update", ReplyAction="http://tempuri.org/IPhieuXuat/PhieuXuat_UpdateResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IPhieuXuat/PhieuXuat_UpdateExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        bool PhieuXuat_Update(QuanLyBanHang.BanHangService.PhieuXuat inp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuXuat/PhieuXuat_Delete", ReplyAction="http://tempuri.org/IPhieuXuat/PhieuXuat_DeleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IPhieuXuat/PhieuXuat_DeleteExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        bool PhieuXuat_Delete(string mapx);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPhieuXuat/PhieuXuat_GetNewID", ReplyAction="http://tempuri.org/IPhieuXuat/PhieuXuat_GetNewIDResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IPhieuXuat/PhieuXuat_GetNewIDExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        string PhieuXuat_GetNewID(int year, int month);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2847,6 +2867,26 @@ namespace QuanLyBanHang.BanHangService {
         
         public System.Data.DataSet PhieuXuat_GetPhieuXuat(QuanLyBanHang.BanHangService.PhieuXuat inp, string swhere) {
             return base.Channel.PhieuXuat_GetPhieuXuat(inp, swhere);
+        }
+        
+        public QuanLyBanHang.BanHangService.PhieuXuatCT[] PhieuXuat_LoadChiTiet(string mapx) {
+            return base.Channel.PhieuXuat_LoadChiTiet(mapx);
+        }
+        
+        public bool PhieuXuat_Insert(QuanLyBanHang.BanHangService.PhieuXuat inp) {
+            return base.Channel.PhieuXuat_Insert(inp);
+        }
+        
+        public bool PhieuXuat_Update(QuanLyBanHang.BanHangService.PhieuXuat inp) {
+            return base.Channel.PhieuXuat_Update(inp);
+        }
+        
+        public bool PhieuXuat_Delete(string mapx) {
+            return base.Channel.PhieuXuat_Delete(mapx);
+        }
+        
+        public string PhieuXuat_GetNewID(int year, int month) {
+            return base.Channel.PhieuXuat_GetNewID(year, month);
         }
     }
     

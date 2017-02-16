@@ -30,9 +30,8 @@ namespace QuanLyBanHang.MenuXuatNhapKho
         {
             try
             {
-                PhieuNhapClient phieunhap_client = new PhieuNhapClient();
                 PhieuNhap pn = new PhieuNhap();
-                dgv_DanhSachPhieuNhap.DataSource = phieunhap_client.PhieuNhap_GetPhieuNhap(pn, "").Tables[0];
+                dgv_DanhSachPhieuNhap.DataSource = client.PhieuNhap_GetPhieuNhap(pn, "").Tables[0];
                 FormatGrid();
             }
             catch (Exception ex)
@@ -210,9 +209,8 @@ namespace QuanLyBanHang.MenuXuatNhapKho
         {
             try
             {
-                PhieuNhapClient phieunhap_client = new PhieuNhapClient();
                 PhieuNhap pn = new PhieuNhap();
-                dgv_DanhSachPhieuNhap.DataSource = phieunhap_client.PhieuNhap_GetPhieuNhap(pn, txt_ThongTinTimKiem.Text).Tables[0];
+                dgv_DanhSachPhieuNhap.DataSource = client.PhieuNhap_GetPhieuNhap(pn, txt_ThongTinTimKiem.Text).Tables[0];
                 FormatGrid();
             }
             catch (Exception ex)

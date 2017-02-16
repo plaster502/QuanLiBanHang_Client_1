@@ -184,6 +184,18 @@
     <Compile Include="MenuXuatNhapKho\uc_InInvenList.Designer.cs">
       <DependentUpon>uc_InInvenList.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuXuatNhapKho\uc_OutInvenCreate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuXuatNhapKho\uc_OutInvenCreate.Designer.cs">
+      <DependentUpon>uc_OutInvenCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuXuatNhapKho\uc_OutInvenList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuXuatNhapKho\uc_OutInvenList.Designer.cs">
+      <DependentUpon>uc_OutInvenList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\BanHangService\Reference.cs">
@@ -247,6 +259,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuXuatNhapKho\uc_InInvenList.resx">
       <DependentUpon>uc_InInvenList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuXuatNhapKho\uc_OutInvenCreate.resx">
+      <DependentUpon>uc_OutInvenCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuXuatNhapKho\uc_OutInvenList.resx">
+      <DependentUpon>uc_OutInvenList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -390,6 +408,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.PhieuNhapCT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.PhieuXuatCT.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\BanHangService\QuanLyBanHang.BanHangService.SanPham.datasource">
