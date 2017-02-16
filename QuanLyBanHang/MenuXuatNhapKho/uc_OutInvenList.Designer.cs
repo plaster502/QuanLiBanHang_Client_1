@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanSach.MenuXuatNhapKho
+﻿namespace QuanLyBanHang.MenuXuatNhapKho
 {
     partial class uc_OutInvenList
     {
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_OutInvenList));
             this.pn_Nav = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pic_Them = new System.Windows.Forms.PictureBox();
             this.lb_ThongTinTimKiem = new System.Windows.Forms.Label();
             this.txt_ThongTinTimKiem = new System.Windows.Forms.TextBox();
-            this.dgv_DanhSachHoaDon = new System.Windows.Forms.DataGridView();
+            this.dgv_DanhSachPhieuXuat = new System.Windows.Forms.DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Detail = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
@@ -43,7 +43,7 @@
             this.pn_Nav.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Them)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachHoaDon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachPhieuXuat)).BeginInit();
             this.SuspendLayout();
             // 
             // pn_Nav
@@ -79,7 +79,7 @@
             // 
             this.pic_Them.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pic_Them.BackColor = System.Drawing.Color.Transparent;
-            this.pic_Them.Image = global::QuanLyBanSach.Properties.Resources.add;
+            this.pic_Them.Image = global::QuanLyBanHang.Properties.Resources.add;
             this.pic_Them.Location = new System.Drawing.Point(43, 3);
             this.pic_Them.Name = "pic_Them";
             this.pic_Them.Size = new System.Drawing.Size(90, 36);
@@ -95,11 +95,11 @@
             this.lb_ThongTinTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_ThongTinTimKiem.AutoSize = true;
             this.lb_ThongTinTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lb_ThongTinTimKiem.Location = new System.Drawing.Point(191, 12);
+            this.lb_ThongTinTimKiem.Location = new System.Drawing.Point(183, 12);
             this.lb_ThongTinTimKiem.Name = "lb_ThongTinTimKiem";
-            this.lb_ThongTinTimKiem.Size = new System.Drawing.Size(137, 20);
+            this.lb_ThongTinTimKiem.Size = new System.Drawing.Size(152, 20);
             this.lb_ThongTinTimKiem.TabIndex = 0;
-            this.lb_ThongTinTimKiem.Text = "Thông tin hoá đơn";
+            this.lb_ThongTinTimKiem.Text = "Thông tin phiếu xuất";
             // 
             // txt_ThongTinTimKiem
             // 
@@ -111,28 +111,28 @@
             this.txt_ThongTinTimKiem.TabIndex = 1;
             this.txt_ThongTinTimKiem.TextChanged += new System.EventHandler(this.txt_ThongTinTimKiem_TextChanged);
             // 
-            // dgv_DanhSachHoaDon
+            // dgv_DanhSachPhieuXuat
             // 
-            this.dgv_DanhSachHoaDon.AllowUserToAddRows = false;
-            this.dgv_DanhSachHoaDon.AllowUserToDeleteRows = false;
-            this.dgv_DanhSachHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DanhSachHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_DanhSachPhieuXuat.AllowUserToAddRows = false;
+            this.dgv_DanhSachPhieuXuat.AllowUserToDeleteRows = false;
+            this.dgv_DanhSachPhieuXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_DanhSachPhieuXuat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
             this.Detail,
             this.Delete,
             this.Fix});
-            this.dgv_DanhSachHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_DanhSachHoaDon.Location = new System.Drawing.Point(0, 49);
-            this.dgv_DanhSachHoaDon.Name = "dgv_DanhSachHoaDon";
-            this.dgv_DanhSachHoaDon.Size = new System.Drawing.Size(829, 297);
-            this.dgv_DanhSachHoaDon.TabIndex = 3;
-            this.dgv_DanhSachHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachHoaDon_CellClick);
-            this.dgv_DanhSachHoaDon.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgv_DanhSachHoaDon_RowPrePaint);
+            this.dgv_DanhSachPhieuXuat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_DanhSachPhieuXuat.Location = new System.Drawing.Point(0, 49);
+            this.dgv_DanhSachPhieuXuat.Name = "dgv_DanhSachPhieuXuat";
+            this.dgv_DanhSachPhieuXuat.Size = new System.Drawing.Size(829, 297);
+            this.dgv_DanhSachPhieuXuat.TabIndex = 3;
+            this.dgv_DanhSachPhieuXuat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachPhieuXuat_CellClick);
+            this.dgv_DanhSachPhieuXuat.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgv_DanhSachPhieuXuat_RowPrePaint);
             // 
             // STT
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.STT.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.STT.DefaultCellStyle = dataGridViewCellStyle2;
             this.STT.FillWeight = 38.5323F;
             this.STT.HeaderText = "STT";
             this.STT.Name = "STT";
@@ -173,7 +173,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.dgv_DanhSachHoaDon);
+            this.Controls.Add(this.dgv_DanhSachPhieuXuat);
             this.Controls.Add(this.pn_Nav);
             this.Name = "uc_OutInvenList";
             this.Size = new System.Drawing.Size(829, 346);
@@ -182,7 +182,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Them)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachHoaDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachPhieuXuat)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,7 +194,7 @@
         private System.Windows.Forms.PictureBox pic_Them;
         private System.Windows.Forms.Label lb_ThongTinTimKiem;
         private System.Windows.Forms.TextBox txt_ThongTinTimKiem;
-        private System.Windows.Forms.DataGridView dgv_DanhSachHoaDon;
+        private System.Windows.Forms.DataGridView dgv_DanhSachPhieuXuat;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewImageColumn Detail;
         private System.Windows.Forms.DataGridViewImageColumn Delete;

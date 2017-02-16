@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Business;
+using QuanLyBanHang.BanHangService;
 
-namespace QuanLyBanSach.MenuXuatNhapKho
+namespace QuanLyBanHang.MenuXuatNhapKho
 {
     public partial class uc_OutInvenCreate : UserControl
     {
-        HoaDon hd = new HoaDon();
-        DataTable book = new DataTable();//Ds sách được phép bán
+        PhieuXuat px = new PhieuXuat();
+        DataTable sanpham = new DataTable();//Ds sp được phép bán
         bool IsInsertOrUpdate = false; //Flag false:Update
 
         #region Contructor
@@ -23,56 +23,55 @@ namespace QuanLyBanSach.MenuXuatNhapKho
             InitializeComponent();
             IsInsertOrUpdate = true;
         }
-        public uc_OutInvenCreate(HoaDon hd_Detail, bool isInsert)
+        public uc_OutInvenCreate(PhieuXuat px_Detail, bool isInsert)
         {
             InitializeComponent();
-            this.hd = hd_Detail;
+            this.px = px_Detail;
             IsInsertOrUpdate = isInsert;
         }
         #endregion
 
-        #region Load Data
+        #region Load dữ liệu
         private void uc_OutInvenCreate_Load(object sender, EventArgs e)
         {
             try
             {
+                PhieuXuatClient client = new PhieuXuatClient();
                 DataTable dtb = new DataTable();
-                dtb.Columns.Add("MaSach");
-                dtb.Columns.Add("SoLuong");
+                dtb.Columns.Add("MaSanPham");
+                dtb.Columns.Add("SoLuongYeuCau");
+                dtb.Columns.Add("SoLuongThucXuat");
                 dtb.Columns.Add("DonGia");
-                if (string.IsNullOrEmpty(hd.MaHoaDon))//Insert
+                if (string.IsNullOrEmpty(px.MaPhieuXuat))//Insert
                 {
-                    txt_MaHoaDon.Text = HoaDon.GetNewID(DateTime.Today.Year, DateTime.Today.Month);
-                    txt_MaHoaDon.Enabled = false;
+                    txt_MaPhieuXuat.Text = client.PhieuXuat_GetNewID(DateTime.Today.Year, DateTime.Today.Month);
+                    txt_MaPhieuXuat.Enabled = false;
                     txt_TongTien.Text = "0";
                     txt_TongTien.Enabled = false;
-                    txt_DaThanhToan.Text = "0";
-                    txt_ConLai.Text = "0";
-                    txt_ConLai.Enabled = false;
-                    txt_DonGia.Enabled = false;
                     LoadMaNhanVien();
                     LoadMaKhachHang();
-                    LoadSach();
+                    LoadSanPham();
+                    LoadHoaDon();
                     dgv_DanhSachChiTiet.DataSource = dtb;
                 }
                 else//Update or Detail
                 {
-                    txt_MaHoaDon.Text = hd.MaHoaDon;
-                    txt_MaHoaDon.Enabled = false;
-                    msk_NgayXuat.Text = hd.NgayXuat.ToString("dd/MM/yyyy");
-                    txt_NhanVien.Text = hd.NhanVien.ToString();
-                    txt_KhachHang.Text = hd.KhachHang.ToString();
-                    txt_TongTien.Text = hd.TongTien.ToString("#,##");
+                    txt_MaPhieuXuat.Text = px.MaPhieuXuat;
+                    txt_MaPhieuXuat.Enabled = false;
+                    msk_NgayXuat.Text = px.NgayXuat.ToString("dd/MM/yyyy");
+                    txt_NhanVien.Text = px.MaNhanVien.ToString();
+                    txt_KhachHang.Text = px.MaKhachHang.ToString();
+                    txt_DiaChi.Text = px.DiaChiGiaoHang;
+                    txt_HoaDon.Text = px.MaHoaDon;
+                    txt_TongTien.Text = px.TongTien.ToString("#,##");
                     txt_TongTien.Enabled = false;
-                    txt_DaThanhToan.Text = hd.DaThanhToan.ToString("#,##");
-                    txt_ConLai.Text = hd.ConLai.ToString("#,##");
-                    txt_ConLai.Enabled = false;
                     txt_DonGia.Enabled = false;
-                    foreach (HoaDon_CT ct in hd.DSChiTiet)
+                    foreach (PhieuXuatCT ct in px.DSChiTiet)
                     {
                         DataRow row = dtb.NewRow();
-                        row["MaSach"] = ct.MaSach;
-                        row["SoLuong"] = ct.SoLuong;
+                        row["MaSanPham"] = ct.MaSanPham;
+                        row["SoLuongYeuCau"] = ct.SoLuongYeuCau;
+                        row["SoLuongThucXuat"] = ct.SoLuongThuc;
                         row["DonGia"] = ct.DonGia.ToString("#,##");
                         dtb.Rows.Add(row);
                     }
@@ -81,19 +80,21 @@ namespace QuanLyBanSach.MenuXuatNhapKho
                     {
                         msk_NgayXuat.Enabled = false;
                         txt_NhanVien.Enabled = false;
-                        btn_AddBook.Visible = false;
+                        btn_Add.Visible = false;
                         btn_Luu.Visible = false;
 
-                        txt_MaSach.Enabled = false;
-                        txt_TenSach.Enabled = false;
-                        txt_SoLuong.Enabled = false;
+                        txt_MaSanPham.Enabled = false;
+                        txt_TenSanPham.Enabled = false;
+                        txt_SoLuongYC.Enabled = false;
+                        txt_SoLuongTX.Enabled = false;
                         txt_KhachHang.Enabled = false;
-                        txt_DaThanhToan.Enabled = false;
+                        txt_DiaChi.Enabled = false;
                         dgv_DanhSachChiTiet.Columns["Delete"].Visible = false;
                     }
                     LoadMaNhanVien();
                     LoadMaKhachHang();
-                    LoadSach();
+                    LoadSanPham();
+                    LoadHoaDon();
                     FormatGrid();
                 }
             }
@@ -106,8 +107,9 @@ namespace QuanLyBanSach.MenuXuatNhapKho
         {
             try
             {
+                NhanVienClient nvclient = new NhanVienClient();
                 NhanVien nv = new NhanVien();
-                DataTable dtb = nv.GetNhanVien("");
+                DataTable dtb = nvclient.NhanVien_GetNhanVien(nv, "").Tables[0];
                 AutoCompleteStringCollection DsNhanVien = new AutoCompleteStringCollection();
                 foreach (DataRow row in dtb.Rows)
                 {
@@ -122,25 +124,26 @@ namespace QuanLyBanSach.MenuXuatNhapKho
                 throw ex;
             }
         }
-        private void LoadSach()
+        private void LoadSanPham()
         {
             try
             {
-                this.book = new Sach().GetSach("");
-                AutoCompleteStringCollection DsMaSach = new AutoCompleteStringCollection();
-                AutoCompleteStringCollection DsTenSach = new AutoCompleteStringCollection();
-                foreach (DataRow row in this.book.Rows)
+                SanPhamClient client = new SanPhamClient();
+                this.sanpham = client.SanPham_Search("").Tables[0];
+                AutoCompleteStringCollection DsMaSanPham = new AutoCompleteStringCollection();
+                AutoCompleteStringCollection DsTenSanPham = new AutoCompleteStringCollection();
+                foreach (DataRow row in this.sanpham.Rows)
                 {
-                    DsMaSach.Add(row["MaSach"].ToString());
-                    DsTenSach.Add(row["TenSach"].ToString());
+                    DsMaSanPham.Add(row["MaSanPham"].ToString());
+                    DsTenSanPham.Add(row["TenSanPham"].ToString());
                 }
-                txt_MaSach.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                txt_MaSach.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                txt_MaSach.AutoCompleteCustomSource = DsMaSach;
+                txt_MaSanPham.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                txt_MaSanPham.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                txt_MaSanPham.AutoCompleteCustomSource = DsMaSanPham;
 
-                txt_TenSach.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                txt_TenSach.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                txt_TenSach.AutoCompleteCustomSource = DsTenSach;
+                txt_TenSanPham.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                txt_TenSanPham.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                txt_TenSanPham.AutoCompleteCustomSource = DsTenSanPham;
             }
             catch (Exception ex)
             {
@@ -151,8 +154,9 @@ namespace QuanLyBanSach.MenuXuatNhapKho
         {
             try
             {
+                KhachHangClient khclient = new KhachHangClient();
                 KhachHang kh = new KhachHang();
-                DataTable dtb = kh.GetKhachHang("");
+                DataTable dtb = khclient.KhachHang_GetKhachHang(kh, "").Tables[0];
                 AutoCompleteStringCollection DsKhachHang = new AutoCompleteStringCollection();
                 foreach (DataRow row in dtb.Rows)
                 {
@@ -167,6 +171,27 @@ namespace QuanLyBanSach.MenuXuatNhapKho
                 throw ex;
             }
         }
+        private void LoadHoaDon()
+        {
+            try
+            {
+                HoaDonClient hdclient = new HoaDonClient();
+                HoaDon hd = new HoaDon();
+                DataTable dtb = hdclient.HoaDon_GetHoaDon(hd, "").Tables[0];
+                AutoCompleteStringCollection DsHoaDon = new AutoCompleteStringCollection();
+                foreach (DataRow row in dtb.Rows)
+                {
+                    DsHoaDon.Add(row["MaHoaDon"].ToString());
+                }
+                txt_HoaDon.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                txt_HoaDon.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                txt_HoaDon.AutoCompleteCustomSource = DsHoaDon;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         private void FormatGrid()
         {
@@ -174,8 +199,9 @@ namespace QuanLyBanSach.MenuXuatNhapKho
             {
                 if (dgv_DanhSachChiTiet.Rows.Count > 0)
                 {
-                    dgv_DanhSachChiTiet.Columns["MaSach"].HeaderText = "Mã sách";
-                    dgv_DanhSachChiTiet.Columns["SoLuong"].HeaderText = "Số lượng";
+                    dgv_DanhSachChiTiet.Columns["MaSanPham"].HeaderText = "Mã sản phẩm";
+                    dgv_DanhSachChiTiet.Columns["SoLuongYeuCau"].HeaderText = "Số lượng yêu cầu";
+                    dgv_DanhSachChiTiet.Columns["SoLuongThucXuat"].HeaderText = "Số lượng xuất";
                     dgv_DanhSachChiTiet.Columns["DonGia"].HeaderText = "Đơn giá";
                 }
             }
@@ -205,32 +231,26 @@ namespace QuanLyBanSach.MenuXuatNhapKho
         #endregion
 
         #region Event Gợi ý textbox
-        private void txt_TenSach_TextChanged(object sender, EventArgs e)
+        private void txt_TenSanPham_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                DataRow[] row = book.Select("TenSach = '" + txt_TenSach.Text + "'");
+                DataRow[] row = sanpham.Select("TenSanPham = '" + txt_TenSanPham.Text + "'");
                 if (row.Length > 0)
-                {
-                    txt_MaSach.Text = row[0]["MaSach"].ToString();
-                    txt_DonGia.Text = Convert.ToDecimal(row[0]["DonGia"]).ToString("#,##");
-                }
+                    txt_MaSanPham.Text = row[0]["MaSanPham"].ToString();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-        private void txt_MaSach_TextChanged(object sender, EventArgs e)
+        private void txt_MaSanPham_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                DataRow[] row = book.Select("MaSach = '" + txt_MaSach.Text + "'");
+                DataRow[] row = sanpham.Select("MaSanPham = '" + txt_MaSanPham.Text + "'");
                 if (row.Length > 0)
-                {
-                    txt_TenSach.Text = row[0]["TenSach"].ToString();
-                    txt_DonGia.Text = Convert.ToDecimal(row[0]["DonGia"]).ToString("#,##");
-                }
+                    txt_TenSanPham.Text = row[0]["TenSanPham"].ToString();
             }
             catch (Exception ex)
             {
@@ -249,7 +269,7 @@ namespace QuanLyBanSach.MenuXuatNhapKho
                 {
                     foreach (DataGridViewRow row in dgv_DanhSachChiTiet.Rows)
                     {
-                        Tong += (Convert.ToDecimal(row.Cells["SoLuong"].Value) * Convert.ToDecimal(row.Cells["DonGia"].Value));
+                        Tong += (Convert.ToDecimal(row.Cells["SoLuongThucXuat"].Value) * Convert.ToDecimal(row.Cells["DonGia"].Value));
                     }
                 }
                 return Tong;
@@ -259,37 +279,24 @@ namespace QuanLyBanSach.MenuXuatNhapKho
                 throw ex;
             }
         }
-        private decimal Remain()
-        {
-            decimal ThanhToan = 0;
-            try
-            {
-                ThanhToan = Convert.ToDecimal(txt_DaThanhToan.Text);
-            }
-            catch (Exception ex)
-            {
-                ThanhToan = 0;
-            }
-            return Convert.ToDecimal(txt_TongTien.Text) - ThanhToan;
-        }
 
-        //Thêm sách vào phiếu + tính toán lại tiển
-        private void btn_AddBook_Click(object sender, EventArgs e)
+        //Thêm sản phẩm vào phiếu + tính toán lại tổng tiển
+        private void btn_AddProduct_Click(object sender, EventArgs e)
         {
             try
             {
-                if (!ChecknullBookInfo())
+                if (!ChecknullInfo())
                 {
                     DataTable dtb = (DataTable)dgv_DanhSachChiTiet.DataSource;
                     DataRow row = dtb.NewRow();
-                    row["MaSach"] = txt_MaSach.Text;
-                    row["SoLuong"] = txt_SoLuong.Text;
+                    row["MaSanPham"] = txt_MaSanPham.Text;
+                    row["SoLuongYeuCau"] = txt_SoLuongYC.Text;
+                    row["SoLuongThucXuat"] = txt_SoLuongTX.Text;
                     row["DonGia"] = txt_DonGia.Text;
                     dtb.Rows.Add(row);
                     dgv_DanhSachChiTiet.DataSource = dtb;
                     FormatGrid();
                     txt_TongTien.Text = Sum().ToString("#,##");
-                    txt_ConLai.Text = Remain().ToString("0,##");
                 }
             }
             catch (Exception ex)
@@ -297,16 +304,16 @@ namespace QuanLyBanSach.MenuXuatNhapKho
                 MessageBox.Show(ex.Message);
             }
         }
-        private bool ChecknullBookInfo()
+        private bool ChecknullInfo()
         {
-            if (txt_MaSach.Text.Trim() == "")
+            if (txt_MaSanPham.Text.Trim() == "")
             {
-                MessageBox.Show("Thiếu mã sách");
+                MessageBox.Show("Thiếu mã sản phẩm");
                 return true;
             }
-            if (txt_TenSach.Text.Trim() == "")
+            if (txt_TenSanPham.Text.Trim() == "")
             {
-                MessageBox.Show("Thiếu tên sách");
+                MessageBox.Show("Thiếu tên sản phẩm");
                 return true;
             }
             if (txt_DonGia.Text.Trim() == "")
@@ -314,16 +321,17 @@ namespace QuanLyBanSach.MenuXuatNhapKho
                 MessageBox.Show("Thiếu đơn giá");
                 return true;
             }
-            if (txt_SoLuong.Text.Trim() == "")
+            if (txt_SoLuongYC.Text.Trim() == "")
             {
-                MessageBox.Show("Thiếu số lượng");
+                MessageBox.Show("Thiếu số lượng yêu cầu");
+                return true;
+            }
+            if (txt_SoLuongTX.Text.Trim() == "")
+            {
+                MessageBox.Show("Thiếu số lượng thực xuất");
                 return true;
             }
             return false;
-        }
-        private void txt_DaThanhToan_TextChanged(object sender, EventArgs e)
-        {
-            txt_ConLai.Text = Remain().ToString("#,##");
         }
 
         //Nút lưu
@@ -331,69 +339,71 @@ namespace QuanLyBanSach.MenuXuatNhapKho
         {
             try
             {
-                HoaDon hd = new HoaDon();
-                hd.MaHoaDon = txt_MaHoaDon.Text;
-                hd.NgayXuat = Convert.ToDateTime(msk_NgayXuat.Text);
-                hd.NhanVien = txt_NhanVien.Text;
-                hd.KhachHang = txt_KhachHang.Text;
-                hd.TongTien = Convert.ToDecimal(txt_TongTien.Text);
-                hd.DaThanhToan = Convert.ToDecimal(txt_DaThanhToan.Text);
-                if (string.IsNullOrEmpty(txt_ConLai.Text))
-                    hd.ConLai = 0;
-                else
-                    hd.ConLai = Convert.ToDecimal(txt_ConLai.Text);
-                hd.DSChiTiet = new List<HoaDon_CT>();
+                PhieuXuatClient client = new PhieuXuatClient();
+                PhieuXuat px = new PhieuXuat();
+                px.MaPhieuXuat = txt_MaPhieuXuat.Text;
+                px.NgayXuat = Convert.ToDateTime(msk_NgayXuat.Text);
+                px.MaNhanVien = txt_NhanVien.Text;
+                px.MaKhachHang = txt_KhachHang.Text;
+                px.TongTien = Convert.ToDecimal(txt_TongTien.Text);
+                px.DiaChiGiaoHang = txt_DiaChi.Text;
+                px.MaHoaDon = txt_HoaDon.Text;
+                List<PhieuXuatCT> dsct = new List<PhieuXuatCT>();
                 foreach (DataGridViewRow row in dgv_DanhSachChiTiet.Rows)
                 {
-                    HoaDon_CT ct = new HoaDon_CT();
-                    ct.MaHoaDon = txt_MaHoaDon.Text;
-                    ct.MaSach = row.Cells["MaSach"].Value.ToString();
-                    ct.SoLuong = Convert.ToInt32(row.Cells["SoLuong"].Value);
+                    PhieuXuatCT ct = new PhieuXuatCT();
+                    ct.MaPhieuXuat = txt_MaPhieuXuat.Text;
+                    ct.MaSanPham = row.Cells["MaSanPham"].Value.ToString();
+                    ct.SoLuongYeuCau = Convert.ToInt32(row.Cells["SoLuongYeuCau"].Value);
+                    ct.SoLuongThuc = Convert.ToInt32(row.Cells["SoLuongThucXuat"].Value);
                     ct.DonGia = Convert.ToDecimal(row.Cells["DonGia"].Value);
-                    hd.DSChiTiet.Add(ct);
+                    dsct.Add(ct);
                 }
+                px.DSChiTiet = dsct.ToArray();
                 if (IsInsertOrUpdate && !Checknull())
                 {
-                    if (hd.Insert())
+                    if (client.PhieuXuat_Insert(px))
                     {
-                        MessageBox.Show("Thêm hoá đơn thành công");
+                        MessageBox.Show("Thêm phiếu xuất thành công");
                         DataTable dtb = new DataTable();
-                        dtb.Columns.Add("MaSach");
-                        dtb.Columns.Add("SoLuong");
+                        dtb.Columns.Add("MaSanPham");
+                        dtb.Columns.Add("SoLuongYeuCau");
+                        dtb.Columns.Add("SoLuongThucXuat");
                         dtb.Columns.Add("DonGia");
-                        txt_MaHoaDon.Text = HoaDon.GetNewID(DateTime.Today.Year, DateTime.Today.Month);
-                        txt_MaHoaDon.Enabled = false;
+                        txt_MaPhieuXuat.Text = client.PhieuXuat_GetNewID(DateTime.Today.Year, DateTime.Today.Month);
+                        txt_MaPhieuXuat.Enabled = false;
                         txt_NhanVien.Text = "";
                         txt_KhachHang.Text = "";
                         msk_NgayXuat.Text = "";
                         txt_TongTien.Text = "0";
                         txt_TongTien.Enabled = false;
-                        txt_DaThanhToan.Text = "0";
-                        txt_ConLai.Text = "0";
-                        txt_ConLai.Enabled = false;
-                        txt_MaSach.Text = "";
-                        txt_TenSach.Text = "";
-                        txt_SoLuong.Text = "";
+                        txt_DiaChi.Text = "";
+                        txt_HoaDon.Text = "";
+                        txt_MaSanPham.Text = "";
+                        txt_TenSanPham.Text = "";
+                        txt_SoLuongYC.Text = "";
+                        txt_SoLuongTX.Text = "";
                         txt_DonGia.Text = "";
                         LoadMaNhanVien();
                         LoadMaKhachHang();
-                        LoadSach();
+                        LoadSanPham();
+                        LoadHoaDon();
                         dgv_DanhSachChiTiet.DataSource = dtb;
                     }
                     else
                     {
-                        MessageBox.Show("Thêm hoá đơn thất bại");
+                        MessageBox.Show("Thêm phiếu xuất thất bại");
                     }
                 }
                 else if (!IsInsertOrUpdate && !Checknull())
                 {
-                    if (hd.Update())
+                    if (client.PhieuXuat_Update(px))
                     {
-                        MessageBox.Show("Cập nhật hoá đơn thành công");
+                        MessageBox.Show("Cập nhật phiếu xuất thành công");
                     }
                     else
                     {
-                        MessageBox.Show("Cập nhật hoá đơn thất bại");
+                        MessageBox.Show("Cập nhật phiếu xuất thất bại");
                     }
                 }
             }
@@ -406,12 +416,12 @@ namespace QuanLyBanSach.MenuXuatNhapKho
         {
             if (msk_NgayXuat.Text.Trim() == "/  /")
             {
-                MessageBox.Show("Thiếu ngày nhập");
+                MessageBox.Show("Thiếu ngày xuất");
                 return true;
             }
             if (string.IsNullOrEmpty(txt_NhanVien.Text))
             {
-                MessageBox.Show("Thiếu nhân viên nhập");
+                MessageBox.Show("Thiếu nhân viên xuất");
                 return true;
             }
             if (string.IsNullOrEmpty(txt_KhachHang.Text))
@@ -421,7 +431,7 @@ namespace QuanLyBanSach.MenuXuatNhapKho
             }
             if (dgv_DanhSachChiTiet.Rows.Count <= 0)
             {
-                MessageBox.Show("Chưa có sách nào được chọn nhập");
+                MessageBox.Show("Chưa có sản phẩm nào được chọn nhập");
                 return true;
             }
             return false;
@@ -434,7 +444,6 @@ namespace QuanLyBanSach.MenuXuatNhapKho
             {
                 dgv_DanhSachChiTiet.Rows.RemoveAt(dgv_DanhSachChiTiet.CurrentRow.Index);
                 txt_TongTien.Text = Sum().ToString("#,##");
-                txt_ConLai.Text = Remain().ToString("#,##");
             }
         }
 
